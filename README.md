@@ -1,3 +1,6 @@
+# Slack dark theme injector tool
+This tool writes the dark theme to the Slack desktop application.
+
 ### Prerequisites
 
 Install [python](https://www.python.org/)
@@ -6,11 +9,11 @@ Install [python](https://www.python.org/)
 
 python
 ```bash
-python makeitdark.py
+sudo python makeitdark.py
 ```
 
 python3
 ```bash
-python3 makeitdark.py
+sudo python3 makeitdark.py
 ```
 
