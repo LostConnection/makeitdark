@@ -83,11 +83,11 @@ if platform == "linux" or platform == "linux2":
     slack_theme_path = "/usr/lib/slack/resources/app.asar.unpacked/src/static/ssb-interop.js"
 elif platform == "darwin":
     # OS X
-    print("Detected OS X, the script will work but you should be using linux because Apple is bad")
+    print("Detected OS X")
     slack_theme_path = "/Applications/Slack.app/Contents/Resources/app.asar.unpacked/src/static/ssb-interop.js"
 else:
     # Probably Windows
-    print("Your OS is not supported, perhaps you are running on a windows machine. Please use a better OS.")
+    print("Your OS is not supported, perhaps you are running on a windows machine.")
     exit()
 
 f = open(slack_theme_path, "a+")
