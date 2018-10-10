@@ -16,4 +16,9 @@ python3
 ```bash
 sudo python3 makeitdark.py
 ```
+### Sidebar
 
+Use the following custom Slack sidebar theme to make it consistent:
+```
+#000000,#000000,#00ff00,#00ff00,#00ff00,#00ff00,#31f700,#ff0000
+```
