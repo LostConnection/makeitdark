@@ -88,8 +88,8 @@ elif platform == "darwin":
 else:
     # Probably Windows
     slack_root_path = os.path.join(os.environ['LOCALAPPDATA'], "slack")
+    most_recent = sorted([slack_version for slack_version in os.listdir(slack_root_path) if slack_version.startswith("app-") and os.path.isdir(os.path.join(slack_root_path, slack_version))], reverse=True)[0]
     print("Searching for most recent slack update in {0}".format(slack_root_path))
-    most_recent = sorted([slack_version for slack_version in os.listdir(slack_root_path) if slack_version.startswith("app-")], reverse=True)[0]
     print("Found {0}".format(most_recent))
     slack_theme_path = os.path.join(slack_root_path, most_recent, "resources", "app.asar.unpacked", "src", "static", "ssb-interop.js")
 
