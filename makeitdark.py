@@ -87,8 +87,11 @@ elif platform == "darwin":
     slack_theme_path = "/Applications/Slack.app/Contents/Resources/app.asar.unpacked/src/static/ssb-interop.js"
 else:
     # Probably Windows
-    print("Your OS is not supported, perhaps you are running on a windows machine.")
-    exit()
+    slack_root_path = os.path.join(os.environ['LOCALAPPDATA'], "slack")
+    print("Searching for most recent slack update in {0}".format(slack_root_path))
+    most_recent = sorted([slack_version for slack_version in os.listdir(slack_root_path) if slack_version.startswith("app-")], reverse=True)[0]
+    print("Found {0}".format(most_recent))
+    slack_theme_path = os.path.join(slack_root_path, most_recent, "resources", "app.asar.unpacked", "src", "static", "ssb-interop.js")
 
 f = open(slack_theme_path, "a+")
 f.write("\n" + injectable)
