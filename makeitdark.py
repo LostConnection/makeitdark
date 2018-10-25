@@ -1,7 +1,16 @@
-from sys import platform
+from sys import platform, argv
 import os
+if len(argv) != 1:
+    if argv[1] == "makeitlight":
+        undo_mode = True
+    else:
+        print("run 'python ./makeitdark.py makeitlight' to undo the changes")
+        exit()
+else:
+    undo_mode = False
 
-injectable = "document.addEventListener(\"DOMContentLoaded\", function() {  \n\
+injectable = "/* BEGIN makeitdark */ \n\
+   document.addEventListener(\"DOMContentLoaded\", function() {  \n\
    \n\
     /* Then get its webviews */  \n\
     let webviews = document.querySelectorAll(\".TeamView webview\");  \n\
@@ -73,7 +82,8 @@ injectable = "document.addEventListener(\"DOMContentLoaded\", function() {  \n\
             })  \n\
         });  \n\
     });  \n\
-});"
+}); \n\
+/* END makeitdark */ "
 
 slack_theme_path = ""
 
@@ -93,9 +103,32 @@ else:
     print("Found {0}".format(most_recent))
     slack_theme_path = os.path.join(slack_root_path, most_recent, "resources", "app.asar.unpacked", "src", "static", "ssb-interop.js")
 
-f = open(slack_theme_path, "a+")
-f.write("\n" + injectable)
-f.close()
-print("Your slack theme has been updated, please restart slack")
-exit()
+if undo_mode:
+    with open(slack_theme_path, "r+") as f:
+        s = ""
+        if "/* BEGIN makeitdark */" not in f.read():
+            print("Didn't make it dark yet")
+            exit()
+        else:
+            f.seek(0,0)
+        for line in f:
+            if '/* BEGIN' not in line:
+                s = s + line
+            else:
+                f.seek(0,0)
+                f.truncate()
+                f.write(s)
+                print("lightened")
+                exit()
 
+else:
+    with open(slack_theme_path, "r+") as f:
+        if "/* BEGIN makeitdark */" in f.read():
+            print("Already made it dark")
+            exit()
+        else:
+            f.seek(0, 2)
+            f.write("\n" + injectable)
+            f.close()
+            print("Your slack theme has been updated, please restart slack")
+            exit()
