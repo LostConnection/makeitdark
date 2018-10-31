@@ -22,3 +22,9 @@ Use the following custom Slack sidebar theme to make it consistent:
 ```
 #000000,#000000,#00ff00,#00ff00,#00ff00,#00ff00,#31f700,#ff0000
 ```
+### Reverting
+
+If you want to uninstall the dark Slack theme you can run with the `makeitlight` option:
+```
+makeitdark.py makeitlight
+```
