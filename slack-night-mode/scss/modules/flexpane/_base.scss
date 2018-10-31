@@ -1,0 +1,140 @@
+#col_flex {
+  background: transparent;
+}
+
+#flex_contents {
+  background: $color-base;
+
+  .heading {
+    background: darken($color-base, 5%);
+    border-bottom-color: $color-shade-dark;
+    color: $base-link-color;
+
+    a {
+      color: $base-link-color;
+
+      &:hover {
+        color: $base-link-color-active;
+      }
+
+      &.close_flexpane {
+        color: $base-link-color;
+      }
+    }
+
+    .cancel_link {
+      color: $base-link-color;
+    }
+
+    .menu_heading {
+      &:hover {
+        color: $base-font-color;
+      }
+    }
+
+    .menu_icon {
+      color: $base-link-color;
+
+      &:hover {
+        color: $base-link-color-active;
+      }
+    }
+  }
+
+  .heading_text {
+    color: $base-link-color;
+  }
+
+  .subheading:not(.empty) {
+    background: $color-base;
+    border-top: 1px solid $color-shade-darkest;
+    color: $color-highlight;
+
+    p a {
+      color: $base-font-color;
+    }
+
+    .filter_menu_label.active .arrow_down {
+      color: $color-highlight;
+    }
+  }
+
+  .toolbar_container {
+    background: $color-base;
+  }
+
+  .flexpane_tab_bar {
+    li {
+      .tab,
+      a {
+        color: $base-link-color;
+      }
+
+      &:hover {
+        border-bottom: 4px solid $color-shade-dark;
+
+        a,
+        .tab {
+          color: $base-link-color;
+        }
+      }
+
+      &.active {
+        border-bottom: 4px solid $color-shade-dark;
+
+        a,
+        .tab {
+          color: $base-link-color;
+        }
+      }
+    }
+  }
+
+  .help {
+    border-top: 5px solid $color-shade-darkest;
+    color: $base-font-color;
+  }
+
+  i.callout {
+    color: $color-highlight;
+  }
+}
+
+.close_flexpane {
+  color: $color-highlight;
+
+  &:focus,
+  &:hover {
+    color: $base-font-color;
+  }
+}
+
+#client-ui.flex_pane_showing #col_flex {
+  border-left-color: $color-shade-dark;
+}
+
+.toolbar_container {
+  background: $color-base;
+  border-bottom: 1px solid $color-shade-darkest;
+  color: $base-font-color;
+}
+
+.msg_right_link {
+  color: $base-link-color;
+}
+
+.message_location_label {
+  color: $color-highlight;
+}
+
+.p-flexpane {
+  &_header {
+    background: $color-shade-dark;
+    border-color: $color-shade-light;
+    color: $base-font-color;
+  }
+}
+
+#client_body:not(.onboarding):not(.feature_global_nav_layout):before {
+  background: $color-shade-dark;
+}

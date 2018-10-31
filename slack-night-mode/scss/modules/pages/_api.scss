@@ -1,0 +1,235 @@
+.api #header_logo img {
+  display: none;
+}
+
+body.api {
+  header .header_links a {
+    color: $base-font-color;
+
+    &.active {
+      background: $color-shade-light;
+    }
+  }
+
+  .reverse_header {
+    background-color: $color-shade-darkest;
+    color: $base-font-color;
+  }
+
+  pre {
+    overflow-x: auto;
+
+    code {
+      color: $base-font-color;
+    }
+  }
+
+  #page_contents .card {
+    background: $color-shade-dark;
+  }
+
+  .scopes_to_methods {
+    code {
+      color: $base-font-color;
+    }
+
+    .selected code {
+      color: $color-red;
+    }
+
+    li {
+      color: $base-font-color;
+    }
+
+    .selected li {
+      color: $base-font-color;
+    }
+  }
+
+  .section_title {
+    border-bottom: 2px solid $color-base;
+  }
+
+  .example {
+    border: 1px solid $color-shade-darkest;
+
+    h5 {
+      background-color: $color-shade-darkest;
+      color: $base-font-color;
+    }
+  }
+
+  .alert {
+    background: $color-shade-light;
+  }
+
+  .hljs {
+    background-image: none;
+  }
+
+  .hljs-keyword,
+  .hljs-selector-tag,
+  .hljs-subst {
+    color: map-get($code-colors, keyword);
+  }
+
+  .hljs-number {
+    color: map-get($code-colors, number);
+  }
+
+  .hljs-literal,
+  .hljs-tag .hljs-attr {
+    color: map-get($code-colors, def);
+  }
+
+  .hljs-variable {
+    color: map-get($code-colors, variable);
+  }
+
+  .hljs-template-variable {
+    color: map-get($code-colors, variable-alt);
+  }
+
+  .hljs-comment {
+    color: map-get($code-colors, comment);
+  }
+
+  .hljs-doctag,
+  .hljs-string {
+    color: map-get($code-colors, string);
+  }
+
+  .hljs-section,
+  .hljs-selector-id,
+  .hljs-title {
+    color: map-get($code-colors, string-alt);
+  }
+
+  .hljs-meta {
+    color: map-get($code-colors, meta);
+  }
+
+  .hljs-class .hljs-title,
+  .hljs-type {
+    color: map-get($code-colors, qualifier);
+  }
+
+  .hljs-built_in,
+  .hljs-builtin-name {
+    color: map-get($code-colors, builtin);
+  }
+
+  .hljs-tag {
+    color: map-get($code-colors, tag);
+  }
+
+  .hljs-attribute,
+  .hljs-name {
+    color: map-get($code-colors, attribute);
+  }
+
+  .hljs-bullet,
+  .hljs-symbol {
+    color: map-get($code-colors, atom);
+  }
+
+  .hljs-quote {
+    color: map-get($code-colors, quote);
+  }
+
+  .hljs-link,
+  .hljs-regexp {
+    color: map-get($code-colors, link);
+  }
+
+  span {
+    &.btn {
+      background-color: $color-base;
+    }
+
+    &.deprecation,
+    &.warning {
+      background-color: $color-red;
+      border-color: $color-red;
+    }
+  }
+}
+
+nav#api_nav {
+  background: transparent;
+  text-shadow: 0 1px 1px $color-shadow-medium;
+}
+
+#api_nav .footer_nav {
+  a {
+    color: $base-link-color;
+
+    &:hover {
+      color: $base-link-color-active;
+    }
+  }
+
+  .footer_signature {
+    color: $color-red;
+  }
+}
+
+.api_articles {
+  .api_articles_section {
+    border-bottom-color: $color-base;
+  }
+
+  .article_tag_count {
+    color: $color-highlight;
+  }
+}
+
+.api.feature_related_content {
+  #api_related_content {
+    h2 {
+      color: $base-font-color;
+    }
+
+    .article_link_title_wrapper {
+      color: $base-link-color;
+    }
+  }
+}
+
+.tab_menu {
+  background-color: $color-shade-dark;
+
+  &.grey {
+    background-color: $color-shade-dark;
+  }
+
+  .tab {
+    color: $base-font-color;
+
+    &:hover {
+      box-shadow: inset 0 -4px 0 0 rgba($color-red, 0.4);
+    }
+
+    &.active,
+    &:active,
+    &:focus {
+      box-shadow: inset 0 -4px 0 0 $color-red;
+      color: $base-font-color;
+    }
+
+    &:disabled {
+      color: $color-highlight;
+    }
+  }
+}
+
+.page_faq,
+.page_scim {
+  h3 {
+    background-color: $color-base;
+  }
+}
+
+.application_config aside {
+  color: $color-highlight;
+}

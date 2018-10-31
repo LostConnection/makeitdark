@@ -1,0 +1,56 @@
+#file_member_filter {
+  background: $color-shade-darkest;
+}
+
+#client-ui {
+  .member_filter {
+    border: 1px solid $color-shade-light;
+  }
+
+  .member_file_filter_menu .searchable_member_list_scroller .team_list_item:hover {
+    .channel_page_member_row {
+      background: $color-base;
+    }
+
+    .member {
+      color: $base-font-color;
+    }
+  }
+
+  #team_list_container #team_filter {
+    .member_filter {
+      background-color: $color-base;
+      border-left: 1px solid $color-shade-darkest;
+    }
+  }
+
+  #file_member_filter {
+    border-color: $color-shade-light;
+
+    .member_filter {
+      border-color: $color-shade-light;
+    }
+  }
+
+  .team_tabs_container {
+    border-bottom: 1px solid $color-shade-darkest;
+  }
+}
+
+#team_filter {
+  .icon_search {
+    color: $color-highlight;
+  }
+
+  a.icon_close {
+    color: $base-link-color;
+
+    &:hover {
+      color: $base-link-color-active;
+    }
+  }
+}
+
+.filter_header {
+  background-color: $color-base;
+}

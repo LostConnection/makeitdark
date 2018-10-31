@@ -1,0 +1,49 @@
+.c-message_list {
+  &__day_divider {
+    &__label {
+      color: $color-highlight;
+
+      &__pill {
+        background: $color-base;
+        position: relative;
+      }
+    }
+
+    &__line {
+      border-top-color: $color-shade-dark;
+    }
+  }
+}
+
+.day_divider {
+  background: $color-base;
+  color: $color-highlight;
+
+  hr {
+    border-bottom: 0;
+    border-top: 1px solid $color-shade-dark;
+  }
+
+  .day_divider_label {
+    background: $color-base;
+  }
+}
+
+.day_container {
+  .day_msgs {
+    border-top: 1px solid $color-shade-dark;
+  }
+
+  &.unread_day_container .day_msgs {
+    border-color: $color-shade-lightest;
+  }
+
+  .day_divider {
+    background: none;
+    color: $color-highlight;
+
+    .day_divider_label {
+      background: $color-base;
+    }
+  }
+}

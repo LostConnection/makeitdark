@@ -1,0 +1,73 @@
+#convo_tab #convo_tab_btns .close_flexpane {
+  &:focus,
+  &:hover {
+    color: $base-font-color;
+  }
+}
+
+#convo_tab textarea.message_input {
+  color: $base-font-color;
+}
+
+#reply_container,
+.reply_input_container {
+  .inline_message_input_container {
+    .message_input div,
+    textarea {
+      border-color: $color-shade-dark;
+      color: $base-font-color;
+
+      &:active,
+      &:focus {
+        border-color: $color-shade-darkest;
+      }
+    }
+  }
+
+  .reply_broadcast_buttons_container .reply_broadcast_label_container {
+    color: $base-font-color;
+
+    ts-icon.ts_icon_question_circle {
+      color: $color-highlight !important;
+    }
+  }
+
+  .reply_limited_in_general {
+    background: $color-base;
+    color: $color-highlight;
+  }
+}
+
+
+#convo_container {
+  .convo_flexpane_divider {
+    border-top-color: $color-shade-dark;
+    color: $color-highlight;
+
+    .reply_count {
+      background: $color-base;
+    }
+  }
+
+  ts-conversation ts-message.selected .message_content .thread_channel_link {
+    color: $base-link-color;
+  }
+}
+
+#convo_tab .message_input,
+#convo_tab textarea#msg_text {
+  color: $base-font-color;
+}
+
+ts-message.message:hover,
+ts-message.message:active,
+ts-message.active:not(.standalone):not(.multi_delete_mode):not(.highlight):not(.new_reply):not(.show_broadcast_indicator), ts-message.message--focus:not(.standalone):not(.multi_delete_mode):not(.highlight):not(.new_reply):not(.show_broadcast_indicator), ts-message:hover:not(.standalone):not(.multi_delete_mode):not(.highlight):not(.new_reply):not(.show_broadcast_indicator) {
+  background-color: $color-shade-darker;
+}
+
+ts-thread {
+  .collapse_inline_thread_container:hover,
+  .view_all_replies_container:hover {
+    background-color: $color-shade-darker;
+  }
+}

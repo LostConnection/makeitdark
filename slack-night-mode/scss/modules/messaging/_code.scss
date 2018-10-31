@@ -1,0 +1,298 @@
+code {
+  background-color: $color-shade-darkest;
+  border: 1px solid $color-shade-dark;
+  color: $base-font-color;
+}
+
+.file_list_item.snippet .snippet_preview {
+  background: $color-shade-darkest;
+}
+
+.snippet_preview,
+.snippet_body {
+  background: $color-shade-darkest;
+
+  pre {
+    color: $base-font-color !important;
+  }
+}
+
+.file_container,
+.c-file_container {
+  .CodeMirror,
+  .sssh-code {
+    .CodeMirror-code > div::before,
+    .sssh-line::before {
+      background-color: $color-shade-dark;
+      border-right: 1px solid $color-shade-dark;
+      color: $color-highlight;
+    }
+  }
+}
+
+.c-snippet .c-file_container {
+  background-color: $color-base;
+
+  &.c-file_container--gradient::after {
+    background: linear-gradient(180deg, $color-shadow-transparent, $color-base);
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+}
+
+.CodeMirror {
+  background: $color-shade-darkest;
+  border: 1px solid $color-shade-dark;
+  color: $base-font-color !important;
+
+  pre {
+    background: transparent !important;
+  }
+
+  div.CodeMirror-cursor {
+    border-left: 1px solid $base-font-color;
+  }
+
+  &.cm-fat-cursor div.CodeMirror-cursor {
+    background: $base-font-color;
+  }
+
+  .CodeMirror-gutters {
+    background-color: $color-shade-dark;
+    border-right: 1px solid $color-base;
+  }
+}
+
+.CodeMirror-gutter-filler,
+.CodeMirror-scrollbar-filler {
+  background-color: $color-shade-dark;
+}
+
+.CodeMirror-linenumber {
+  color: $color-highlight !important;
+}
+
+.CodeMirror-guttermarker {
+  color: $color-highlight;
+}
+
+.CodeMirror-guttermarker-subtle {
+  color: $color-highlight;
+}
+
+.CodeMirror-ruler {
+  border-left: 1px solid $color-shade-lightest;
+}
+
+.cm-s-default {
+  .cm-keyword {
+    color: map-get($code-colors, keyword);
+  }
+
+  .cm-atom {
+    color: map-get($code-colors, atom);
+  }
+
+  .cm-number {
+    color: map-get($code-colors, number);
+  }
+
+  .cm-def {
+    color: map-get($code-colors, def);
+  }
+
+  .cm-variable-2 {
+    color: map-get($code-colors, variable);
+  }
+
+  .cm-variable-3 {
+    color: map-get($code-colors, variable-alt);
+  }
+
+  .cm-comment {
+    color: map-get($code-colors, comment);
+  }
+
+  .cm-string {
+    color: map-get($code-colors, string);
+  }
+
+  .cm-string-2 {
+    color: map-get($code-colors, string-alt);
+  }
+
+  .cm-meta {
+    color: map-get($code-colors, meta);
+  }
+
+  .cm-qualifier {
+    color: map-get($code-colors, qualifier);
+  }
+
+  .cm-builtin {
+    color: map-get($code-colors, builtin);
+  }
+
+  .cm-bracket {
+    color: map-get($code-colors, bracket);
+  }
+
+  .cm-tag {
+    color: map-get($code-colors, tag);
+  }
+
+  .cm-attribute {
+    color: map-get($code-colors, attribute);
+  }
+
+  .cm-header {
+    color: map-get($code-colors, header);
+  }
+
+  .cm-quote {
+    color: map-get($code-colors, quote);
+  }
+
+  .cm-hr {
+    color: map-get($code-colors, hr);
+  }
+
+  .cm-link {
+    color: map-get($code-colors, link);
+  }
+}
+
+.cm-negative {
+  color: $color-red;
+}
+
+.cm-positive {
+  color: $color-green;
+}
+
+.cm-invalidchar,
+.cm-s-default .cm-error {
+  color: $color-red;
+}
+
+div.CodeMirror span {
+  &.CodeMirror-matchingbracket {
+    color: $color-green;
+  }
+
+  &.CodeMirror-nonmatchingbracket {
+    color: $color-red;
+  }
+}
+
+.CodeMirror-matchingtag {
+  background: $color-shade-darkest;
+}
+
+.CodeMirror-activeline-background {
+  background: $color-shade-lightest;
+}
+
+.CodeMirror-selected {
+  background: $color-shade-lightest;
+}
+
+.CodeMirror-focused .CodeMirror-selected {
+  background: $color-shade-lightest;
+}
+
+.cm-searching {
+  background: $color-shade-lightest;
+}
+
+.sssh-keyword {
+  color: map-get($code-colors, keyword);
+}
+
+.sssh-atom {
+  color: map-get($code-colors, atom);
+}
+
+.sssh-number {
+  color: map-get($code-colors, number);
+}
+
+.sssh-def {
+  color: map-get($code-colors, def);
+}
+
+.sssh-variable {
+  color: map-get($code-colors, variable);
+}
+
+.sssh-variable-2 {
+  color: map-get($code-colors, variable-alt);
+}
+
+.sssh-variable-3 {
+  color: adjust-hue(map-get($code-colors, variable-alt), 180);
+}
+
+.sssh-operator {
+  color: $base-font-color;
+}
+
+.sssh-property {
+  color: $base-font-color;
+}
+
+.sssh-comment {
+  color: map-get($code-colors, comment);
+}
+
+.sssh-string {
+  color: map-get($code-colors, string);
+}
+
+.sssh-string-2 {
+  color: map-get($code-colors, string-alt);
+}
+
+.sssh-meta {
+  color: map-get($code-colors, meta);
+}
+
+.sssh-error {
+  color: $color-red;
+}
+
+.sssh-qualifier {
+  color: map-get($code-colors, qualifier);
+}
+
+.sssh-builtin {
+  color: map-get($code-colors, builtin);
+}
+
+.sssh-bracket {
+  color: map-get($code-colors, bracket);
+}
+
+.sssh-tag {
+  color: map-get($code-colors, tag);
+}
+
+.sssh-attribute {
+  color: map-get($code-colors, attribute);
+}
+
+.sssh-header {
+  color: map-get($code-colors, header);
+}
+
+.sssh-quote {
+  color: map-get($code-colors, quote);
+}
+
+.sssh-hr {
+  color: map-get($code-colors, hr);
+}
+
+.sssh-link {
+  color: map-get($code-colors, link);
+}

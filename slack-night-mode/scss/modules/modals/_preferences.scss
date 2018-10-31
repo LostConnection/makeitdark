@@ -1,0 +1,116 @@
+#fs_modal.prefs_modal {
+  label.sound_option {
+    &:hover:not(.disabled) ts-icon {
+      color: $color-highlight;
+    }
+  }
+
+  #prefs_sidebar {
+    .theme_thumb {
+      box-shadow: 0 1px 1px $color-shadow-medium;
+    }
+
+    #prefs_themes_customize {
+      .custom_theme_label {
+        border: 1px solid $color-shade-dark;
+
+        .color_swatch {
+          border: 1px solid $color-shade-dark;
+        }
+      }
+
+      .colpick {
+        background: $color-shade-mid;
+        border: 1px solid $color-shade-dark;
+      }
+    }
+
+    #prefs_sidebar_theme::after {
+      background: $color-red;
+      border-radius: 3px;
+      content: "Light sidebar themes (e.g. Hoth) will break this Stylish theme.";
+      display: block;
+      font-size: 14px;
+      line-height: 18px;
+      margin: 12px 0 6px;
+      padding: 6px;
+      width: 100%;
+    }
+  }
+
+  legend {
+    color: $base-font-color;
+  }
+
+  .global_notification_block {
+    background: $color-base;
+    border-color: $color-shade-darkest;
+
+    &.selected {
+      background: $color-shade-dark;
+      border-color: $color-shade-darkest;
+    }
+  }
+
+  .channel_overrides_row {
+    border-top-color: $color-shade-darkest;
+
+    &:hover {
+      background: $color-shade-dark;
+      border-color: $color-shade-darkest;
+    }
+
+    .channel_overrides_summary {
+      color: $base-font-color;
+    }
+  }
+
+  .notification_example {
+    &.mac {
+      background: $color-shade-darkest;
+      box-shadow: 0 1px 8px 2px $color-shade-dark;
+    }
+
+    &.linux,
+    &.windows {
+      background: $color-shade-darkest;
+      color: $base-font-color;
+    }
+  }
+
+  .badge_example {
+    background: $color-red;
+  }
+
+  .message_theme_preview {
+    border-bottom-color: $color-shade-darkest;
+    border-top-color: $color-shade-darkest;
+  }
+
+  .display_real_names_block_sample {
+    background: $color-base;
+  }
+}
+
+.sidebar_menu_list_item {
+  border: 0;
+  color: $base-font-color;
+
+  &.is_active {
+    background-color: $color-shade-darkest;
+    color: $base-font-color;
+    text-shadow: 0 1px 0 $color-shadow-light;
+  }
+
+  &:not(.is_active):hover {
+    background-color: $color-shade-dark;
+  }
+}
+
+.jumbomoji_pref_disabled {
+  color: $color-highlight;
+}
+
+.jumbomoji_disabled_note {
+  color: rgba($color-highlight, 0.6);
+}

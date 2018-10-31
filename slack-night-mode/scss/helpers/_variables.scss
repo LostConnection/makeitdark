@@ -1,0 +1,46 @@
+// Theme Colors
+$color-base: #222 !default;
+$color-highlight: #949494 !default;
+$color-red: #bf360c !default;
+$color-green: adjust-hue($color-red, 140) !default;
+$color-yellow: #fff6d1 !default;
+
+$color-shade-darkest: #000 !default;
+$color-shade-darker: #222222 !default;
+$color-shade-dark: #363636 !default;
+$color-shade-mid: #424242 !default;
+$color-shade-light: #545454 !default;
+$color-shade-lightest: #828282 !default;
+
+// Font Colors
+$base-font-color: #e6e6e6 !default;
+
+$base-link-color: $color-highlight !default;
+$base-link-color-active: #c7c7c7 !default;
+
+// Grayscale Colors
+$black: #000;
+$white: #fff;
+
+// Shadow Colors
+$color-shadow-dark: rgba($black, 0.5) !default;
+$color-shadow-medium: rgba($black, 0.25) !default;
+$color-shadow-light: rgba($black, 0.15) !default;
+$color-shadow-transparent: rgba(255, 255, 255, 0) !default;
+
+// Code Colors
+$code-colors: (
+  keyword: #ce93d8, atom: #9fa8da, number: #a5d6a7, def: #536dfe,
+  variable: #9fa8da, variable-alt: #c5e1a5, comment: #ffcc80, string: #ef9a9a,
+  string-alt: #ffab91, meta: #eee, qualifier: #eee, builtin: #b39ddb,
+  bracket: #e6ee9c, tag: #a5d6a7, attribute: #40c4ff, header: #80cbc4,
+  quote: #b0bec5, hr: $color-shade-dark, link: $base-link-color
+);
+
+// Emoji Hover Colors
+$emoji-hover-colors: (
+  0: #b7e887, 1: #b5e0fe, 2: #f9ef67, 3: #f3c1fd, 4: #ffe1ae, 5: #e0dfff
+);
+
+// Font Families
+// $base-font-family may be set in themes to override the chat font-family

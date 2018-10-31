@@ -1,0 +1,45 @@
+.loading {
+  #loading-zone {
+    background: $color-base;
+  }
+}
+
+#loading_welcome {
+  background-image: none;
+}
+
+#loading_message {
+  p {
+    color: $base-font-color;
+  }
+
+  #loading_message_attribution {
+    color: $color-highlight;
+  }
+}
+
+#loading_team_menu_bg,
+#loading_user_menu_bg {
+  background: $color-base;
+  border: none;
+}
+
+.infinite_spinner_bg,
+.infinite_spinner_blue {
+  stroke: $base-font-color;
+}
+
+body.loading {
+  #team_menu,
+  #quick_switcher_btn,
+  #team_menu_overlay,
+  #col_channels_overlay,
+  #col_channels {
+    background-color: $color-shade-dark;
+  }
+}
+
+.p-degraded_list__loading {
+  background-color: $color-base;
+  color: $base-font-color;
+}

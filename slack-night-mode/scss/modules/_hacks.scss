@@ -1,0 +1,9 @@
+.monkey_scroll_bar {
+  z-index: 99; // This should have a higher z-index than messages and dividers or else they overlap.
+}
+
+.client_header_icon {
+  -moz-filter: brightness(0.6) contrast(3) invert(1) sepia(0.5);
+  -webkit-filter: brightness(0.6) contrast(3) invert(1) sepia(0.5);
+  filter: brightness(0.6) contrast(3) invert(1) sepia(0.5);
+}

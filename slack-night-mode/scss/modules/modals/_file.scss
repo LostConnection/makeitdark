@@ -1,0 +1,105 @@
+.fs_modal_file_viewer_header {
+  background-color: $color-shade-dark;
+  box-shadow: 0 1px 0 $color-shadow-dark;
+
+  .btn {
+    color: $base-font-color;
+  }
+
+  .star {
+    color: $color-highlight;
+  }
+
+  .control_btn,
+  a.control_btn {
+    color: $base-font-color;
+
+    &:link,
+    &:visited {
+      color: $base-font-color;
+    }
+
+    &:focus,
+    &:hover {
+      color: $color-highlight;
+    }
+
+    &.active,
+    &:active {
+      background: $color-shade-light;
+    }
+  }
+
+  .file_size,
+  .muted_tooltip_info {
+    color: $color-highlight;
+  }
+
+  .close_btn {
+    &::after {
+      border-right: 1px solid $color-shade-light;
+    }
+  }
+}
+
+.fs_modal_file_viewer_content {
+  .viewer {
+    background-color: $color-shade-darkest;
+    color: $base-font-color !important;
+
+    .next_btn,
+    .previous_btn {
+      ts-icon {
+        background: $color-shade-light;
+        box-shadow: 0 1px 1px 0 $color-shadow-medium;
+      }
+
+      &:focus:not([disabled]),
+      &:hover:not([disabled]) {
+        background: rgba($color-shade-lightest, 0.25);
+        color: $base-font-color;
+      }
+
+      &[disabled] {
+        &:focus,
+        &:hover {
+          color: rgba($color-highlight, 0.8);
+        }
+      }
+    }
+  }
+
+  .aside_panel {
+    background-color: $color-base;
+    box-shadow: -1px 0 0 $color-shadow-medium;
+  }
+
+  .comment_header {
+    background-color: transparent;
+    border-bottom: 1px solid $color-shade-darkest;
+  }
+
+  .no_comment {
+    background-color: $color-base;
+    color: $color-highlight;
+  }
+
+  .aside_close_btn {
+    color: $base-font-color;
+  }
+
+  #file_comment {
+    color: $base-font-color;
+  }
+}
+
+#file_comment_textarea.texty_comment_input {
+  background: $color-base;
+  border-color: $color-shade-dark;
+  color: $base-font-color;
+
+  &.focus,
+  &:hover {
+    border-color: $color-shade-dark;
+  }
+}

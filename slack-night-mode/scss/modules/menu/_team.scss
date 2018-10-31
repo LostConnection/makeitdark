@@ -1,0 +1,68 @@
+#team_menu {
+  background: $color-shade-dark;
+  border-bottom: 2px solid $color-shade-dark;
+  color: $base-font-color;
+
+  &.active,
+  &:hover {
+    background: $color-shade-dark !important;
+    border-bottom-color: $color-shade-dark !important;
+
+    i {
+      color: $base-font-color;
+    }
+  }
+
+  i {
+    color: $color-highlight;
+  }
+
+  .presence {
+    .presence_icon {
+      text-shadow: 0 1px 1px $color-shadow-light;
+    }
+  }
+
+  .team_name_caret,
+  .notifications_menu_btn {
+    color: $base-font-color !important;
+  }
+}
+
+#team_menu_user {
+  color: $color-highlight;
+}
+
+#team_menu_user_name,
+#team_menu_user_details {
+  color: $base-font-color !important;
+  opacity: 0.75;
+}
+
+.slack_menu_section::before {
+  border-top-color: $color-base;
+}
+
+.slack_menu_header_secondary {
+  color: $color-highlight;
+}
+
+.slack_menu_download {
+  background-color: $color-shade-dark;
+
+  ts-icon {
+    color: $color-highlight;
+  }
+}
+
+#menu_items_scroller::-webkit-scrollbar-track {
+  background: $color-base !important;
+}
+
+#limit_meter:hover #limit_meter_message_body {
+  color: $base-font-color;
+}
+
+#limit_meter_message_body {
+  color: $color-highlight;
+}

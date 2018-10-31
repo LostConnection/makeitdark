@@ -1,0 +1,23 @@
+pre {
+  background: $color-shade-darkest;
+  border: 1px solid $color-shade-dark;
+  color: $base-font-color;
+
+  span.mention {
+    padding: 2px 0 !important;
+  }
+}
+
+#page pre,
+body > pre {
+  background: $color-shade-darkest;
+  color: $base-font-color !important;
+}
+
+body > pre {
+  background: $color-shade-lightest;
+}
+
+.special_formatting_quote .quote_bar {
+  background-color: $color-shade-light;
+}

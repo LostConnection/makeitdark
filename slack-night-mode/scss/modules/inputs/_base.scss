@@ -1,0 +1,336 @@
+input {
+  &[type=text],
+  &[type=password],
+  &[type=datetime],
+  &[type=datetime-local],
+  &[type=date],
+  &[type=month],
+  &[type=time],
+  &[type=week],
+  &[type=number],
+  &[type=email],
+  &[type='url'], // libsass#2429
+  &[type=tel],
+  &[type=color],
+  &[type=search] {
+    background-color: $color-shade-light;
+    border-color: $color-shade-darkest;
+    color: $base-font-color;
+
+    &:focus {
+      border-color: rgba($color-shade-dark, 0.8);
+      box-shadow: inset 0 1px 1px rgba($black, 0.075), 0 0 8px rgba($color-shade-lightest, 0.6);
+    }
+  }
+
+  &[type=file]:focus {
+    outline: $base-font-color dotted thin;
+  }
+
+  &[type=radio]:focus,
+  &[type=checkbox]:focus {
+    outline: $base-font-color dotted thin;
+  }
+}
+
+select {
+  background: $color-shade-light;
+}
+
+select,
+textarea {
+  border: 1px solid $color-shade-darkest;
+  color: $base-font-color;
+
+  &:active,
+  &:focus {
+    border-color: $color-shade-dark;
+    box-shadow: 0 0 7px rgba($color-shade-lightest, 0.15);
+  }
+}
+
+input:disabled,
+input:disabled:active,
+select:disabled,
+textarea:disabled {
+  border-color: $color-shade-mid !important;
+}
+
+.no_touch {
+  input:hover,
+  select:hover,
+  textarea:hover {
+    border-color: $color-shade-dark;
+  }
+
+  label.select {
+    &:hover select {
+      border-color: $color-shade-dark;
+    }
+
+    &:not(.disabled):hover::after {
+      color: $color-shade-dark;
+    }
+  }
+}
+
+label.disabled {
+  color: $base-font-color;
+}
+
+legend {
+  border-bottom: 1px solid $color-shade-lightest;
+
+  small {
+    color: $color-highlight;
+  }
+}
+
+.uneditable-input,
+.uneditable-textarea {
+  background-color: $color-shade-mid;
+  border: 1px solid $color-shade-darkest;
+  color: $base-font-color;
+
+  &:focus {
+    border-color: rgba($color-shade-lightest, 0.8);
+    box-shadow: inset 0 1px 1px rgba($black, 0.075), 0 0 8px rgba($color-shade-lightest, 0.6);
+  }
+}
+
+textarea {
+  background-color: $color-shade-light;
+  border: 1px solid $color-shade-darkest;
+  color: $base-font-color;
+}
+
+textarea:focus {
+  border-color: rgba($color-shade-lightest, 0.8);
+  box-shadow: inset 0 1px 1px rgba($black, 0.075), 0 0 8px rgba($color-shade-lightest, 0.6);
+}
+
+@include placeholder;
+
+input,
+textarea {
+  @include placeholder;
+
+  &[disabled],
+  &[readonly] {
+    background-color: $color-shade-light !important;
+  }
+}
+
+.form-actions {
+  background-color: $color-shade-mid;
+  border-top: 1px solid $color-shade-dark;
+}
+
+.help-block,
+.help-inline {
+  color: $color-highlight;
+}
+
+.input-append .add-on,
+.input-prepend .add-on {
+  background-color: $color-shade-lightest;
+  border: 1px solid $color-shade-light;
+  text-shadow: 0 1px 0 $color-shadow-light;
+}
+
+.btn {
+  background-color: $color-shade-light;
+  color: $base-font-color !important;
+  text-shadow: 0 1px 1px $color-shadow-light;
+
+  &.hover,
+  &:focus,
+  &:hover,
+  &.active,
+  &:active {
+    background-color: $color-shade-light;
+    color: $base-font-color;
+  }
+
+  &.btn_border {
+    border: 2px solid $color-shade-mid;
+  }
+
+  &.disabled,
+  &:disabled {
+    background-color: $color-shade-darkest !important;
+
+    &:active,
+    &:hover {
+      background-color: $color-shade-darkest !important;
+    }
+  }
+
+  &.btn_outline {
+    &.btn_danger,
+    &.btn_warning {
+      background-color: $color-red !important;
+      color: $base-font-color !important;
+
+      &:focus,
+      &:hover {
+        background-color: $color-base !important;
+        border-color: $color-red !important;
+        color: $color-red !important;
+      }
+    }
+
+    &.disabled {
+      background: $color-shade-mid !important;
+      color: $base-link-color !important;
+
+      &:hover {
+        background: $color-shade-mid !important;
+        color: $base-link-color !important;
+      }
+    }
+  }
+
+  &.btn_attachment {
+    border-color: $color-shade-light;
+
+    &:hover,
+    &:focus {
+      background-color: $color-shade-dark;
+      border-color: $color-shade-lightest;
+    }
+
+    &.btn_danger {
+      border-color: $color-red;
+
+      &:hover,
+      &:focus {
+        border-color: lighten($color-red, 10%);
+      }
+    }
+
+    &.btn_primary {
+      border-color: $color-shade-lightest;
+
+      &:hover,
+      &:focus {
+        border-color: lighten($color-shade-lightest, 10%);
+      }
+    }
+  }
+}
+
+.btn_basic {
+  &:focus,
+  &:hover {
+    color: $base-font-color;
+  }
+}
+
+.btn_outline {
+  background: $color-base;
+  color: $base-link-color !important;
+
+  &::after {
+    border: 1px solid $color-shade-mid;
+  }
+
+  &.btn_transparent {
+    color: rgba($color-shade-light, 0.9) !important;
+
+    &::after {
+      border: 1px solid rgba($color-base, 0.5);
+    }
+
+    &.active,
+    &.hover,
+    &:active,
+    &:focus,
+    &:hover {
+      background-color: rgba($color-shade-light, 0.9) !important;
+      color: $base-link-color-active !important;
+    }
+
+    &.active,
+    &:active {
+      background-color: rgba($color-shade-light, 0.8) !important;
+    }
+  }
+
+  &.hover,
+  &:focus,
+  &:hover {
+    background: $color-base;
+    color: $base-link-color-active !important;
+  }
+
+  &:active {
+    color: $base-link-color-active;
+  }
+
+  &.active {
+    color: $base-link-color-active !important;
+  }
+}
+
+.btn_link {
+  color: $base-link-color;
+
+  &:hover,
+  &:focus {
+    color: $base-link-color-active;
+  }
+}
+
+.btn-group {
+  &.open {
+    .btn.dropdown-toggle {
+      background-color: $color-shade-light;
+    }
+
+    .btn-primary.dropdown-toggle {
+      background-color: $color-shade-mid;
+    }
+  }
+
+  > {
+    .btn + .dropdown-toggle {
+      box-shadow: inset 1px 0 0 rgba($black, 0.125), inset 0 1px 0 rgba($black, 0.2), 0 1px 2px rgba($white, 0.05);
+    }
+  }
+}
+
+.btn_info,
+.btn.btn_success {
+  background-color: $color-base !important;
+}
+
+.btn_warning,
+.btn_danger {
+  background-color: $color-red !important;
+}
+
+.btn-danger .caret,
+.btn-info .caret,
+.btn-inverse .caret,
+.btn-primary .caret,
+.btn-success .caret,
+.btn-warning .caret {
+  border-bottom-color: $base-font-color;
+  border-top-color: $base-font-color;
+}
+
+.input_note {
+  color: $base-font-color;
+}
+
+.c-enhanced_text_input {
+  background-color: $color-shade-light;
+  border-color: $color-shade-dark;
+  color: $color-highlight;
+
+  &:hover,
+  &.c-enhanced_text_input--active {
+    border-color: $color-shade-light;
+  }
+}

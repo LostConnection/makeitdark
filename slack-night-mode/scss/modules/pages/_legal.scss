@@ -1,0 +1,66 @@
+.legal-hero {
+  background-color: $color-base;
+
+  &.v--no-switch,
+  .o-hero__header {
+    background-color: $color-base;
+  }
+
+  .o-hero__header__headline--larger {
+    color: $base-font-color;
+  }
+}
+
+.legal-main {
+  background-color: $color-shade-dark;
+
+  &.v--no-switch {
+    background-color: $color-shade-dark;
+    border-bottom-color: $color-shade-light;
+    border-top-color: $color-shade-light;
+  }
+
+  p {
+    color: $base-font-color;
+  }
+
+  a {
+    border-bottom-color: $color-shade-light;
+  }
+
+  @media screen and (min-width: 67.8125rem) {
+    .c-nav--sidebar__listheader {
+      color: $base-font-color;
+    }
+
+    .c-nav--sidebar__listitem {
+      a {
+        &.is-selected {
+          color: $color-highlight;
+        }
+      }
+    }
+  }
+
+  .t-contains-subtle-links a:not(.c-button) {
+    color: $base-font-color;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $color-highlight;
+    }
+  }
+}
+
+@media screen and (min-width: 67.8125rem) {
+  .t-no-header .legal-main {
+    background-color: $color-shade-dark;
+  }
+}
+
+.t-no-header {
+  .legal-hero.o-hero.v--short {
+    background-color: $color-shade-dark;
+  }
+}

@@ -1,0 +1,215 @@
+#autocomplete_menu {
+  color: $base-font-color;
+
+  header {
+    background-color: $color-base;
+
+    .header_label {
+      color: $color-highlight;
+    }
+
+    hr {
+      border-bottom-color: transparent;
+      border-top-color: $color-shade-darkest;
+    }
+  }
+
+  h2 {
+    color: $base-font-color;
+  }
+
+  .no_results {
+    color: $base-font-color;
+  }
+
+  .keyword_match .modifier {
+    color: $color-highlight;
+  }
+
+  .boxed {
+    background: $color-base;
+    border: 1px solid $color-shade-dark;
+    box-shadow: 0 1px 0 0 $color-shadow-light;
+  }
+
+  .pickmeup {
+    border-bottom: 1px solid $color-shade-dark;
+  }
+
+  &.search_menu,
+  &.search_menu.unified {
+    .section_header::before {
+      background-color: $color-shade-light;
+    }
+
+    header {
+      color: $base-font-color;
+
+      .header_label::before {
+        background-color: $color-shade-dark;
+      }
+    }
+
+    .query_header {
+      background-color: transparent;
+
+      .search_query_preview {
+        color: $base-font-color;
+      }
+    }
+
+    li.highlighted {
+      .result_item_btn {
+        background: $color-shade-dark;
+        color: $base-font-color;
+        text-shadow: 0 1px 0 $color-shadow-light;
+      }
+
+      .modifier_icon {
+        color: $color-highlight;
+      }
+
+      .action_btn {
+        color: $base-font-color;
+      }
+
+      .delete_btn {
+        color: $base-link-color;
+
+        &:focus,
+        &:hover {
+          color: $color-red;
+        }
+      }
+
+      .muted_text {
+        color: $color-highlight;
+      }
+    }
+
+    &:not(.keyboard_active) li,
+    .results.unified:not(.keyboard_active) li {
+      &:focus,
+      &:hover {
+        background: transparent;
+
+        .muted_text {
+          color: $color-highlight;
+        }
+
+        .result_item_btn {
+          background: $color-shade-dark;
+          color: $base-font-color;
+          text-shadow: 0 1px 0 $color-shadow-light;
+        }
+
+        .modifier_icon {
+          color: $color-highlight;
+        }
+
+        .action_btn {
+          color: $base-font-color;
+        }
+
+        .delete_btn {
+          color: $base-link-color;
+
+          &:focus,
+          &:hover {
+            color: $color-red;
+          }
+        }
+      }
+    }
+
+    .muted_text {
+      color: $color-highlight;
+    }
+
+    .time_modifiers::before {
+      background-color: $color-shade-dark;
+    }
+
+    .result_item_btn {
+      color: $base-font-color;
+    }
+
+    .results.unified {
+      .unified_autocomplete_item {
+        .text {
+          color: $base-font-color;
+        }
+
+        .token {
+          background-color: $color-shade-mid;
+          color: $base-font-color;
+        }
+      }
+    }
+
+    .action_btn,
+    .modifier_icon {
+      color: $color-highlight;
+    }
+
+    footer,
+    footer.unified {
+      .keyword::before,
+      .modifier::before {
+        background: $color-shade-lightest;
+        border: 1px solid $color-shade-light;
+        color: $base-font-color;
+      }
+
+      .selected {
+        .keyword::before,
+        .modifier::before {
+          background: rgba($color-shade-light, 0.25);
+          border: $color-shade-lightest;
+        }
+      }
+
+      .modifier.incomplete::before {
+        background: $color-shade-dark;
+        border: 1px solid $color-shade-darkest;
+      }
+    }
+  }
+}
+
+.search_light_grey {
+  color: $base-font-color !important;
+}
+
+.highlighter_underlay {
+  .keyword::before {
+    background: $color-shade-lightest;
+    border: 1px solid $color-shade-light;
+    color: $base-font-color;
+  }
+
+  .modifier {
+    &::before {
+      background: $color-shade-lightest;
+      border: 1px solid $color-shade-light;
+      color: $base-font-color;
+    }
+
+    &.incomplete::before {
+      background: $color-shade-dark;
+      border: 1px solid $color-shade-darkest;
+    }
+  }
+
+  .selected {
+    .keyword::before,
+    .modifier::before {
+      background: rgba($color-shade-lightest, 0.25);
+      border: $color-shade-light;
+    }
+  }
+
+  .ghost_text {
+    color: $base-font-color;
+  }
+}

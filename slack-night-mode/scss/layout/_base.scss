@@ -1,0 +1,66 @@
+body {
+  background: $color-base;
+  color: $base-font-color;
+}
+
+a {
+  color: $base-link-color;
+
+  &:link,
+  &:visited {
+    color: $base-link-color;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $base-link-color-active;
+  }
+}
+
+hr {
+  border-bottom: 1px solid $color-shade-mid;
+  border-top: 1px solid $color-base;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: $base-font-color;
+}
+
+h1 a {
+  color: $base-font-color;
+
+  &:active,
+  &:hover,
+  &:link,
+  &:visited {
+    color: $base-font-color;
+  }
+}
+
+.bordered {
+  border: 1px solid $color-shade-dark;
+}
+
+.top_border {
+  border-top: 1px solid $color-shade-dark;
+}
+
+.bottom_border {
+  border-bottom: 1px solid $color-shade-dark;
+}
+
+.left_border {
+  border-left: 1px solid $color-shade-dark;
+}
+
+.right_border {
+  border-right: 1px solid $color-shade-dark;
+}
+
+.bullet {
+  color: $color-highlight;
+}

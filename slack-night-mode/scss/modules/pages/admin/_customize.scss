@@ -1,0 +1,39 @@
+table tr {
+  border-bottom-color: $color-base;
+}
+
+table tr:first-child th:not(:only-of-type) {
+  border-bottom-color: $color-shade-darkest;
+}
+
+.slackbot_response_fieldset .delete_response {
+  color: $color-highlight;
+
+  &:hover {
+    color: $color-red;
+  }
+}
+
+.author_cell {
+  color: $base-font-color;
+}
+
+.message_cell.disabled {
+  color: $color-highlight;
+}
+
+#message_container #msg_limit {
+  color: $base-font-color;
+}
+
+.statuses_container .current_status_cell .current_status_container {
+  .current_status_cover,
+  &:not(.active).with_status_set .current_status_cover {
+    border-color: $color-shade-light;
+  }
+
+  .current_status_emoji_picker_cover,
+  &:not(.active).with_status_set .current_status_emoji_picker_cover {
+    border-right: 1px solid $color-shade-light;
+  }
+}

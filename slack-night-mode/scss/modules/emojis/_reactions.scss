@@ -1,0 +1,41 @@
+.rxn,
+.c-reaction,
+.c-reaction_add,
+.c-member_slug {
+  background: $color-shade-dark;
+  border: 1px solid $color-shade-light;
+
+  &.active,
+  &:hover {
+    background: $color-shade-mid;
+
+    .emoji_rxn_count {
+      color: $base-font-color;
+    }
+  }
+
+  &.c-reaction--reacted {
+    background-color: rgba($color-shade-mid, 0.08);
+    border-color: rgba($color-shade-lightest, 0.4) !important;
+
+    .emoji_rxn_count,
+    .c-reaction__count {
+      color: $base-font-color;
+    }
+  }
+
+  .emoji_rxn_count,
+  .c-reaction__count {
+    color: $base-font-color;
+  }
+
+  &.menu_rxn .ts_icon {
+    color: rgba($base-font-color, 0.25);
+  }
+}
+
+a.c-member_slug--mention,
+a.c-member_slug--mention:hover {
+  background-color: $color-yellow;
+  color: $color-shade-dark;
+}

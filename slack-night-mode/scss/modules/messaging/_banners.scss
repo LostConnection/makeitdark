@@ -1,0 +1,119 @@
+.p-message_pane {
+  .c-message_list.c-virtual_list--scrollbar > .c-scrollbar__hider {
+    background: $color-base;
+
+    &::before {
+      background: $color-base;
+      border-bottom: 1px solid $color-base;
+    }
+  }
+
+  .p-message_pane__top_banners:not(:empty) + div .c-message_list {
+    &:not(.c-virtual_list--scrollbar),
+    &.c-virtual_list--scrollbar > .c-scrollbar__hider {
+      &:before {
+        box-shadow: 0 32px $color-base;
+      }
+    }
+  }
+
+  &__foreword__description,
+  &__limited_history_alert {
+    color: $base-font-color;
+  }
+}
+
+.p-message_pane__limited_history_foreword {
+  background: $color-shade-dark;
+  background-image: none;
+  color: $base-font-color;
+}
+
+.p-message_pane__unread_banner__banner {
+  background: $color-shade-light;
+  text-shadow: 0 1px $color-shadow-light;
+}
+
+.messages_banner {
+  color: $base-font-color;
+  text-shadow: 0 1px $color-shadow-light;
+
+  a {
+    color: $base-font-color;
+
+    &:hover {
+      color: $base-font-color;
+    }
+  }
+}
+
+#connection_div {
+  background: $color-red;
+}
+
+#archives_return {
+  background: padding-box $color-shade-lightest;
+  color: $base-font-color;
+
+  &.warning {
+    background: $color-red;
+  }
+
+  a {
+    color: $base-font-color;
+
+    &:hover {
+      color: rgba($base-font-color, 0.8);
+    }
+  }
+}
+
+#messages_unread_status {
+  background: $color-shade-light;
+
+  &:hover {
+    background: $color-shade-lightest;
+
+    .clear_unread_messages {
+      background: $color-shade-lightest;
+
+      &:hover {
+        background: $color-shade-light;
+      }
+    }
+  }
+
+  &.quiet {
+    background: $color-shade-lightest;
+    color: $base-font-color;
+    text-shadow: 0 1px $color-shadow-light;
+
+    a {
+      color: $base-font-color;
+    }
+  }
+}
+
+.clear_unread_messages {
+  border-left: 1px solid $color-shadow-light;
+}
+
+#messages_container.has_top_messages_banner::before {
+  background: none;
+}
+
+.end_div_msg_lim {
+  background-color: $color-shade-dark;
+  background-image: none;
+}
+
+#archives_end_div_msg_lim,
+#end_display_msg_lim {
+  h1 {
+    color: $base-font-color;
+  }
+
+  h2 {
+    color: rgba($base-font-color, 0.8);
+  }
+}

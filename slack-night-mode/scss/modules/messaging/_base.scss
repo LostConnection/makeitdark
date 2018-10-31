@@ -1,0 +1,725 @@
+#msgs_overlay_div {
+  background: $color-base;
+}
+
+#col_messages {
+  box-shadow: inset 1px 0 0 0 $color-base;
+}
+
+.c-mrkdwn__broadcast--mention,
+.c-mrkdwn__broadcast--mention:hover,
+.c-mrkdwn__highlight,
+.c-mrkdwn__mention,
+.c-mrkdwn__mention:hover,
+.c-mrkdwn__subteam--mention,
+.c-mrkdwn__subteam--mention:hover,
+.mention_yellow_bg {
+  color: $color-highlight !important;
+}
+
+.c-message {
+  &:hover {
+    .c-message__broadcast_preamble_outer,
+    .c-message__broadcast_preamble {
+      color: $color-highlight;
+    }
+  }
+
+  &--hover {
+    .c-message__broadcast_preamble_outer,
+    .c-message__broadcast_preamble {
+      .c-message--focus {
+        .c-message__broadcast_preamble_outer, .c-message__broadcast_preamble {
+          color: $color-highlight;
+        }
+      }
+    }
+  }
+
+  &:hover,
+  &--hover,
+  &--focus {
+    &:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight) {
+      background: rgba($color-shade-darkest, 0.1);
+    }
+  }
+
+  &:hover,
+  &--hover .c-message__body--automated .c-message--focus {
+    .c-message__body--automated {
+      color: $color-highlight;
+    }
+  }
+
+  &:hover .c-message__file_meta,
+  &--hover .c-message__file_meta .c-message--focus .c-message__file_meta {
+    color: $color-highlight;
+  }
+
+  &--focus {
+    &:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight) {
+      background: rgba($color-shade-darkest, 0.1);
+    }
+  }
+
+  &--pinned,
+  &--sli_highlight:not(.c-message--sli_highlight_negative),
+  &--starred {
+    background: rgba($color-shade-darkest, 0.2);
+  }
+
+  &--custom_response {
+    background: rgba($color-shade-darkest, 0.15);
+  }
+
+
+  &--sli_highlight_negative,
+  &--ephemeral {
+    background: rgba($color-shade-darkest, 0.1);
+  }
+
+  &--pinned .c-message__label__icon {
+    color: $color-red;
+  }
+
+  &--custom_response,
+  &--sli_highlight {
+    .c-message__label__icon {
+      color: $base-font-color;
+    }
+  }
+
+  &--sli_highlight .c-message__label {
+    .c-mrkdwn__member--link,
+    .c-mrkdwn__channel.internal_channel_link {
+      color: $color-highlight;
+    }
+  }
+
+  &--sli_highlight_negative .c-message__label {
+    background: rgba($color-shade-darkest, 0.1);
+  }
+
+  &--resend .c-message__body {
+    color: $color-highlight;
+  }
+
+  &--deleting {
+    background: rgba($color-red, 0.6);
+  }
+
+  &--standalone {
+    border-color: rgba($color-shade-light, 0.1);
+  }
+
+  &--unprocessed .c-message__body {
+    animation: to-grey 50ms linear 10s forwards;
+  }
+
+  &__broadcast_preamble_outer,
+  &__broadcast_preamble {
+    color: $color-highlight;
+  }
+
+  &__sender {
+    color: $base-font-color;
+
+    a {
+      color: $base-font-color;
+    }
+
+    .c-emoji__text_mode_icon {
+      color: $color-highlight;
+    }
+  }
+
+  &__body {
+    color: $base-font-color;
+
+    &--unknown {
+      background: rgba($color-shade-light, 0.1);
+    }
+
+    &--automated {
+      color: $color-highlight;
+    }
+
+    &--tombstone {
+      color: $color-highlight;
+    }
+  }
+
+  &__label {
+    color: $color-highlight;
+
+    &__highlight_title {
+      color: $base-font-color;
+    }
+
+    &__highlight_positive,
+    &__highlight_negative {
+      color: $color-highlight;
+    }
+
+    &__highlight_positive--active,
+    &__highlight_negative--active {
+      color: $base-font-color;
+    }
+  }
+
+  &__resend {
+    &_controls {
+      color: $color-highlight;
+    }
+
+    &_column {
+      background-color: rgba($color-shade-light, 0.1);
+    }
+  }
+
+  &__resend,
+  &__cancel {
+    color: $base-font-color;
+  }
+
+  &__edited_label {
+    color: $color-highlight;
+  }
+
+  &__tombstone_icon {
+    background: rgba($color-shade-light, 0.1);
+    color: $color-highlight;
+  }
+
+  &__bot_label {
+    background: rgba($color-shade-light, 0.1);
+    color: $color-highlight;
+  }
+
+  &__comment {
+    &:before {
+      color: $color-highlight;
+    }
+  }
+
+  &__call_attachment {
+    background: $color-base;
+    border-color: rgba($color-shade-light, 0.1);
+  }
+
+  &__call_icon {
+    color: $base-font-color;
+  }
+
+  &__call--ended .c-message__call_icon {
+    color: $color-highlight;
+  }
+
+  &__call_info {
+    color: $base-font-color;
+  }
+
+  &__call_name--linked {
+    color: $base-font-color;
+  }
+
+  &__call_name + .c-message__call_description {
+    &::before {
+      color: $color-highlight;
+    }
+  }
+
+  &__call_sub {
+    color: $color-highlight;
+  }
+}
+
+.c-message_actions {
+  &__container {
+    background: $color-base;
+    border-color: $color-shade-dark;
+
+    &:hover {
+      border-color: $color-shade-light;
+      box-shadow: 0 1px 1px $color-shadow-medium;
+    }
+  }
+
+  &__button {
+    border-right-color: $color-shade-dark;
+    color: $base-link-color;
+
+    &:hover {
+      color: $base-font-color;
+    }
+
+    &:active {
+      background: $color-shade-dark;
+    }
+  }
+}
+
+.c-message_group {
+  background-color: $color-base;
+  border-color: $color-shade-dark;
+
+  &:hover .c-message_group__header {
+    color: $color-highlight;
+  }
+
+  &__header {
+    color: $base-font-color;
+  }
+
+  &__divider_text {
+    background-color: $color-base;
+    color: $base-font-color;
+  }
+}
+
+.c-message_list {
+  &__unread_divider {
+    &__separator {
+      border-color: $color-shade-light;
+    }
+
+    &__label {
+      background: $color-base;
+      box-shadow: 0 0 2px $color-shadow-medium;
+      color: $color-shade-light;
+    }
+  }
+
+  &__spinner {
+    color: $color-highlight;
+  }
+
+  .c-scrollbar__bar {
+    background: $color-shade-mid;
+  }
+}
+
+.c-virtual_list__item--focus:focus .c-message_list__focus_indicator {
+  box-shadow: inset 0 0 0 3px rgba($color-shade-lightest, 0.8);
+}
+
+ts-message {
+  color: $base-font-color;
+
+  &.active:not(.standalone):not(.multi_delete_mode):not(.highlight):not(.new_reply),
+  &.message--focus:not(.standalone):not(.multi_delete_mode):not(.highlight):not(.new_reply),
+  &:hover:not(.standalone):not(.multi_delete_mode):not(.highlight):not(.new_reply) {
+    background: rgba($color-shade-darkest, 0.1);
+    box-shadow: inset 1px 0 0 0 $color-base;
+
+    &.is_pinned,
+    &.show_recap:not(.is_pinned) {
+      background: rgba($color-shade-darkest, 0.2);
+    }
+  }
+
+  &.active,
+  &.message--focus,
+  &:hover {
+    .edited,
+    .reply_bar .last_reply_at,
+    .timestamp,
+    &.automated .message_body {
+      color: $color-highlight;
+    }
+
+    .meta {
+      color: $color-highlight !important;
+
+      &.msg_inline_file_preview_toggler a {
+        color: $color-highlight !important;
+      }
+    }
+  }
+
+  &.is_pinned {
+    background: rgba($color-shade-darkest, 0.15);
+  }
+
+  .timestamp {
+    color: $base-link-color;
+  }
+
+  .temp_msg_controls {
+    color: $color-highlight;
+  }
+
+  .edited {
+    color: rgba($color-highlight, 0.8);
+  }
+
+  &:hover .edited {
+    color: $color-highlight;
+  }
+
+  .only_visible_to_user {
+    color: $color-highlight;
+  }
+
+  &.ephemeral {
+    color: $base-font-color;
+  }
+
+  .bot_label {
+    background: $color-shade-darkest;
+    color: $color-highlight;
+  }
+
+  .in_reply_to {
+    background: $color-shade-darkest;
+    color: $color-highlight;
+  }
+
+  &.standalone:not(.for_mention_display):not(.for_search_display):not(.for_top_results_search_display):not(.for_star_display) {
+    border: 1px solid $color-shade-dark;
+  }
+
+  &.unprocessed {
+    color: rgba($base-font-color, 0.75);
+  }
+
+  &.highlight {
+    background: rgba($color-red, 0.4);
+
+    &:hover {
+      background: rgba($color-red, 0.4);
+    }
+  }
+
+  .is_highlights_holder {
+    color: $color-highlight;
+
+    ts-icon {
+      color: $color-highlight;
+    }
+
+    .highlights_feedback_link {
+      color: $color-highlight;
+    }
+
+    .highlights_feedback a:not(.highlights_feedback_link) {
+      color: $base-font-color;
+    }
+  }
+
+  .recap_highlight {
+    background: rgba($color-red, 0.4);
+
+    a {
+      color: $base-font-color;
+    }
+  }
+
+  &.delete_mode,
+  &.multi_delete_mode {
+    background: rgba($color-red, 0.75);
+  }
+
+  &.automated .message_body {
+    color: rgba($base-font-color, 0.8);
+  }
+
+  .action_hover_container {
+    border: 1px solid $color-shade-dark;
+
+    &:hover {
+      border-color: $color-shade-light;
+      box-shadow: 0 1px 1px $color-shadow-medium;
+
+      a {
+        background: $color-shade-dark;
+        border-right: 1px solid $color-shade-light;
+      }
+    }
+
+    .btn_msg_action {
+      background: $color-base;
+      border-right: 1px solid $color-shade-dark;
+      color: $base-link-color;
+
+      &:hover {
+        color: $base-font-color;
+      }
+
+      &.active,
+      &:active {
+        background: $color-shade-dark;
+        color: $base-font-color;
+      }
+    }
+  }
+
+  &.selected {
+    background: $color-base;
+
+    &:not(.delete_mode) {
+      background: $color-base;
+    }
+
+    &:hover {
+      background: $color-shadow-light;
+    }
+  }
+
+  .meta {
+    color: $color-highlight;
+
+    &.msg_inline_img_toggler,
+    &.msg_inline_file_preview_toggler {
+      .member,
+      .service_link {
+        color: $base-link-color !important;
+      }
+
+      .msg_inline_media_toggler,
+      .ts_icon_dropbox,
+      a {
+        color: $color-highlight !important;
+      }
+    }
+  }
+
+  .pinned_item_message_header {
+    color: $color-highlight;
+  }
+
+  .mention {
+    background: $color-shade-lightest !important;
+    color: $base-font-color !important;
+  }
+
+  .internal_member_link {
+    background: $color-base !important;
+    border: 0;
+    color: $base-link-color !important;
+
+    &:hover {
+      color: $base-link-color-active !important;
+    }
+  }
+
+  &.show_recap:not(.is_pinned) {
+    background: rgba($color-shade-darkest, 0.15);
+
+    &:hover {
+      background: rgba($color-shade-darkest, 0.15);
+    }
+  }
+}
+
+.ephemeral.message .message_content {
+  color: $base-font-color;
+}
+
+ts-mention {
+  background: rgba($color-shade-lightest, 0.1) !important;
+  color: $base-font-color !important;
+}
+
+.selecting_messages ts-message {
+  &:hover {
+    background: $color-shade-darkest;
+  }
+
+  &.multi_delete_mode:hover {
+    background: rgba($color-red, 0.75);
+  }
+}
+
+#convo_container {
+  background-color: $color-base;
+
+  #message_edit_container {
+    border-bottom: 1px solid $color-shade-light;
+    border-top: 1px solid $color-shade-light;
+  }
+
+  ts-conversation {
+    &::after {
+      background: rgba($color-shade-darkest, 0.08);
+      background: -webkit-gradient(linear, left bottom, left top, color-stop(0, transparent), color-stop(1, rgba($color-shade-darkest, 0.08)));
+      background: -moz-linear-gradient(center bottom, transparent 0, rgba($color-shade-darkest, 0.08) 100%);
+    }
+
+    &::before {
+      background: transparent;
+      background: -webkit-gradient(linear, left bottom, left top, color-stop(0, rgba($color-shade-darkest, 0.08)), color-stop(1, transparent));
+      background: -moz-linear-gradient(center bottom, rgba($color-shade-darkest, 0.08) 0, transparent 100%);
+    }
+
+    ts-message {
+      &.selected {
+        background: $color-base;
+      }
+    }
+
+    ts-relatives {
+      &::after {
+        background: $color-shade-light;
+      }
+
+      ts-message {
+        &.deleted {
+          .message_icon i {
+            background-color: $color-shade-light;
+            color: $color-highlight;
+          }
+
+          .message_content {
+            color: $base-font-color;
+          }
+        }
+
+        &:not(.selected):not(.highlight):not(.delete_mode) {
+          background-color: $color-base;
+
+          &.new {
+            background-color: lighten($color-base, 5%);
+          }
+        }
+      }
+    }
+  }
+}
+
+#msgs_div {
+  .unread_divider {
+    hr {
+      border-top: 1px solid $color-shade-light;
+    }
+
+    .divider_label {
+      background: $color-base;
+      color: $color-shade-light;
+    }
+
+    &.no_unreads {
+      hr {
+        border-top-color: $color-shade-dark;
+      }
+
+      .divider_label {
+        color: $color-highlight;
+      }
+    }
+  }
+}
+
+.channel_archive_messages.card .col:first-child {
+  border-right: 1px solid $color-shade-light;
+}
+
+.star {
+  color: $color-highlight;
+}
+
+.star_item {
+  border-bottom: 1px solid $color-shade-darkest;
+
+  .star_meta {
+    color: $color-highlight;
+  }
+}
+
+.bot_message .message_sender {
+  color: $base-font-color;
+
+  a {
+    color: $base-font-color;
+  }
+}
+
+.color_USLACKBOT:not(.nuc),
+#col_channels ul li:not(.active):not(.away) > .color_USLACKBOT:not(.nuc),
+#col_channels:not(.show_presence) ul li > .color_USLACKBOT:not(.nuc) {
+  color: $base-font-color;
+}
+
+#msgs_scroller_div #end_display_div {
+  #end_display_status {
+    color: $color-highlight;
+  }
+
+  #end_display_meta {
+    color: $color-highlight;
+
+    h1 {
+      color: $base-font-color;
+    }
+  }
+
+  p {
+    color: $base-font-color;
+  }
+}
+
+.member_mentions_options {
+  background-color: $color-shade-darkest;
+  border-top: 1px solid $color-shade-dark;
+}
+
+.dm_badge {
+  .dm_badge_meta {
+    color: $base-font-color;
+  }
+
+  a {
+    color: $base-link-color;
+
+    &.member_preview_link {
+      color: $base-link-color;
+    }
+  }
+
+  .dm_badge:hover a {
+    color: $base-link-color;
+  }
+
+  .hint {
+    color: $color-highlight;
+  }
+}
+
+#toggle-subscription-status .subscription_desc {
+  color: $color-highlight;
+}
+
+.bot_label {
+  background: $color-shade-darkest;
+  color: $color-highlight;
+}
+
+@keyframes to-grey {
+  0% {
+    color: inherit;
+  }
+
+  100% {
+    color: $color-highlight;
+  }
+}
+
+@keyframes fade-background-highlight {
+  0% {
+    background: $color-shade-light;
+  }
+
+  100% {
+    background: transparent;
+  }
+}
+
+@keyframes border_focus_animation {
+  0% {
+    box-shadow: 0 0 4px 0.25px $color-shade-light, 0 0 0 0.5px $color-shade-lightest;
+  }
+
+  100% {
+    box-shadow: 0 0 4px 0 $color-shade-light, 0 0 0 0 $color-shade-lightest;
+  }
+}

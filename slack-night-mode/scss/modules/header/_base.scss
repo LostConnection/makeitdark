@@ -1,0 +1,131 @@
+.channel_header {
+  background: $color-base;
+  box-shadow: inset 1px 0 0 0 $color-base;
+
+  .blue_on_hover:hover {
+    color: $base-font-color;
+  }
+}
+
+#client_body:not(.onboarding)::before {
+  background: $color-base;
+  border-bottom: 1px solid $color-shade-dark;
+  box-shadow: inset 1px 0 0 0 $color-base;
+}
+
+.messages_header {
+  color: $base-font-color;
+}
+
+.channel_title {
+  .channel_name_container {
+    .channel_name {
+      color: $base-font-color;
+
+      &.muted {
+        color: $color-highlight;
+      }
+    }
+
+    .ts_icon_shared_channel,
+    .mpdm_member {
+      &.away {
+        color: $color-highlight;
+      }
+    }
+
+    .muted_icon {
+      color: $color-highlight;
+
+      &:hover {
+        color: $color-red;
+      }
+    }
+  }
+}
+
+#im_title.away {
+  color: $color-highlight;
+}
+
+.channel_header_info button {
+  color: $base-link-color;
+}
+
+.channel_header_icon {
+  color: $base-font-color;
+}
+
+.channel_calls_button .call_icon.call_window_offline {
+  color: $color-highlight;
+}
+
+.channel_actions_toggle,
+.details_toggle {
+  &.active:focus {
+    color: $base-font-color;
+  }
+}
+
+#flex_menu_toggle {
+  &.active,
+  &.active:focus {
+    color: $base-font-color;
+  }
+
+  .flex_menu_download_circle {
+    background: $color-base;
+
+    canvas {
+      background: $color-base;
+    }
+  }
+
+  &.unread #help_icon_circle_count {
+    background-color: $color-red;
+    color: $white;
+  }
+
+  &.open #help_icon_circle_count {
+    background-color: $color-shade-darkest;
+    color: $base-font-color;
+  }
+}
+
+#canvases_toggle,
+#details_toggle,
+#recent_mentions_toggle,
+#sli_recap_toggle,
+#stars_toggle {
+  &.active {
+    background: $color-shade-dark;
+    color: $base-font-color;
+
+    &:hover {
+      background: $color-shade-light;
+      color: $base-font-color;
+    }
+  }
+}
+
+#recent_mentions_toggle:hover {
+  color: $color-red;
+}
+
+#rxn_toast_div {
+  background: $color-shade-darkest;
+  border: 1px solid $color-shade-light;
+}
+
+.presence {
+  color: $color-highlight;
+}
+
+#edit_topic_inner:not(.unable_to_post)::before {
+  background: $color-base;
+  border-color: $color-shade-dark;
+}
+
+#edit_topic_trigger {
+  color: $base-link-color;
+}

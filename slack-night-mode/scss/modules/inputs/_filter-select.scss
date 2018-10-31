@@ -1,0 +1,88 @@
+.lazy_filter_select {
+  &.disabled {
+    background: $color-shade-dark;
+
+    input.lfs_input {
+      background: $color-shade-lightest;
+    }
+  }
+
+  .lfs_input_container {
+    background-color: $color-shade-light;
+    border-color: $color-shade-darkest;
+
+    &.active,
+    &:hover {
+      border-color: $color-shade-dark;
+    }
+
+    &.active {
+      box-shadow: 0 0 7px rgba($color-base, 0.15);
+    }
+  }
+
+  .lfs_list_container {
+    background: $color-base;
+    border-color: $color-shade-darkest;
+    box-shadow: 0 0 3px $color-shadow-dark;
+  }
+
+  .lfs_list .lfs_item {
+    &.selected {
+      color: $base-font-color;
+
+      .c-member__current-status .prevent_copy_paste,
+      .c-member__current-status--small::before,
+      .c-member__display-name,
+      .c-member__name,
+      .c-member__secondary-name {
+        color: $base-font-color !important;
+      }
+    }
+
+    &.disabled {
+      color: $color-highlight;
+    }
+
+    &.active {
+      background-color: $color-shade-darkest;
+      border-color: $color-shade-dark;
+      color: $base-font-color;
+    }
+  }
+
+  .lfs_token {
+    background: $color-base;
+    border: 1px solid $color-shade-darkest;
+    color: $base-font-color;
+
+    &::after {
+      color: $base-font-color;
+    }
+  }
+
+  &.single .lfs_input_container {
+    &.active::after,
+    &:hover::after {
+      color: $base-font-color;
+    }
+  }
+}
+
+#select_share_channels .lazy_filter_select {
+  .lfs_value .lfs_item.selected {
+    color: $base-font-color !important;
+
+    .ts_icon:not(.presence_icon) {
+      color: $color-highlight !important;
+    }
+  }
+
+  .lfs_item {
+    color: $color-highlight !important;
+
+    .ts_icon:not(.presence_icon) {
+      color: $color-highlight !important;
+    }
+  }
+}

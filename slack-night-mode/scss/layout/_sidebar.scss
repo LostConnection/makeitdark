@@ -1,0 +1,209 @@
+.client_channels_list_container {
+  background-color: $color-shade-dark;
+  border-right-color: $color-base;
+}
+
+#col_channels {
+  color: $base-font-color;
+}
+
+.p-channel_sidebar {
+  background-color: $color-shade-dark;
+  color: $base-font-color;
+
+  &__channel,
+  &__link {
+    &,
+    &:link,
+    &:visited,
+    &:hover {
+      color: rgba($base-font-color, 0.8) !important;
+    }
+
+    &--selected,
+    &--selected:link,
+    &--selected:visited,
+    &--selected:hover {
+      color: $base-font-color;
+    }
+
+    &:hover {
+      background: $color-base !important;
+    }
+  }
+
+  &__header {
+    color: $base-font-color !important;
+  }
+
+  &__channel--im.p-channel_sidebar__channel--selected .c-presence,
+  &__channel--im-slackbot.p-channel_sidebar__channel--selected::before {
+    color: $base-font-color;
+  }
+
+  &__channel--im .c-presence--away {
+    color: $color-highlight;
+  }
+
+  &__channel--selected,
+  &__link--selected {
+    background: $color-shade-light !important;
+
+    &:hover {
+      background: $color-shade-light !important;
+    }
+  }
+
+  &__channel--selected {
+    &::before,
+    &:hover::before,
+    &::after,
+    &:hover::after {
+      color: $base-font-color;
+    }
+  }
+
+  &__link--selected {
+    &::before,
+    &::after {
+      color: $base-font-color;
+    }
+  }
+
+  &__badge,
+  &__banner--mentions {
+    background: $color-red;
+  }
+
+  .c-custom_scrollbar__thumb_vertical,
+  .c-scrollbar__bar {
+    background: $color-shade-light;
+  }
+
+  &__channel--unread:not(.p-channel_sidebar__channel--muted):not(.p-channel_sidebar__channel--selected) .p-channel_sidebar__name,
+  &__link--unread .p-channel_sidebar__name,
+  &__link--invites:not(.p-channel_sidebar__link--dim) .p-channel_sidebar__name,
+  &__section_heading_label--clickable:hover,
+  &__quickswitcher:hover {
+    color: lighten($base-font-color, 6%) !important;
+  }
+
+  &__close_container:hover {
+    background: $color-shade-darkest;
+  }
+
+  &__jumper {
+    background: transparent !important; // !important in order to overcome specificity score that matches base style
+  }
+}
+
+.channels_list_holder {
+  h2 {
+    color: $base-font-color !important;
+
+    &.hoverable:not(.jquery_hover):hover {
+      color: $base-font-color;
+      opacity: 0.8;
+    }
+  }
+
+  ul {
+    color: $base-font-color !important;
+
+    li {
+      text-shadow: 0 1px 1px $color-shadow-light;
+
+      .channel_name,
+      .group_name,
+      .im_name,
+      .mpim_name,
+      > a {
+        background: $color-shade-dark;
+        color: rgba($base-font-color, 0.8) !important;
+
+        &:hover {
+          background: $color-base !important;
+          border-bottom-right-radius: 0.25rem;
+          border-top-right-radius: 0.25rem;
+        }
+      }
+
+      .primary_action {
+        &.im_name:hover .im_name_background,
+        &.feature_user_custom_status:hover .im_name_background,
+        &:not(.feature_user_custom_status):hover {
+          background: $color-base;
+        }
+      }
+
+      &.mention a {
+        color: $base-font-color;
+      }
+
+      &.unread {
+        &:not(.muted_channel) .primary_action {
+          color: lighten($base-font-color, 6%) !important;
+        }
+
+        .prefix {
+          color: $base-font-color !important;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .group_close,
+  .im_close,
+  .mpim_close {
+    color: $base-link-color !important;
+  }
+
+  .unread_highlights {
+    background: $color-red;
+    color: $base-font-color;
+    text-shadow: 0 1px 0 $color-shadow-light;
+  }
+
+  .unread_msgs {
+    background: $color-base;
+    color: $base-font-color;
+  }
+}
+
+#channel_list_invites_link {
+  border-bottom: 1px dotted $base-link-color;
+  color: $base-link-color !important;
+  font-size: 0.9rem;
+
+  &:hover {
+    border-bottom: 1px solid $base-link-color;
+  }
+}
+
+#quick_switcher_btn {
+  background: $color-shade-dark;
+  border-top: 2px solid $color-shade-dark;
+
+  > i {
+    color: $color-highlight;
+  }
+
+  &:active,
+  &:hover {
+    background: $color-base;
+    border-color: $color-base;
+
+    > i {
+      color: $base-link-color;
+    }
+
+    #quick_switcher_label {
+      color: $base-link-color;
+    }
+  }
+}
+
+#quick_switcher_label {
+  color: $color-highlight;
+}

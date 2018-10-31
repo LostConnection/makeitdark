@@ -1,0 +1,48 @@
+.c-oauth_scope_info {
+  &__spacer_icon {
+    color: $color-red;
+  }
+
+  &__dangerous_scopes,
+  &__safe_scopes {
+    border-bottom-color: $color-shade-light;
+  }
+
+  &__dangerous_scopes {
+    border-left-color: $color-red;
+    border-right-color: $color-shade-light;
+    border-top-color: $color-shade-light;
+  }
+
+  &__dangerous_scope:not(:first-child),
+  &__safe_scope {
+    border-top-color: $color-shade-light;
+  }
+}
+
+a.p-oauth_nav__anchor {
+  color: $color-highlight;
+}
+
+.p-oauth_nav__team-switcher {
+  .menu_launcher {
+    border-color: $color-shade-dark;
+
+    &:hover {
+      border: $color-shade-light;
+    }
+  }
+}
+
+.p-oauth_page,
+.p-oauth_page--error {
+  background: $color-base;
+}
+
+.p-oauth_page__title {
+  color: $base-font-color;
+}
+
+.p-oauth_page_single_channel_picker {
+  border-bottom-color: $color-shade-dark;
+}

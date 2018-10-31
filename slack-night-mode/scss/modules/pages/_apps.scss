@@ -1,0 +1,447 @@
+.page_apps_directory_home {
+  background-color: $color-base !important;
+
+  .nav_title {
+    color: $base-font-color !important;
+  }
+
+  &__search {
+    .apps_search_input {
+      &::placeholder,
+      &:focus::placeholder {
+        color: $color-highlight;
+      }
+    }
+
+    .apps_search_input__body {
+      box-shadow: 0 1px 10px $color-shade-lightest;
+    }
+  }
+}
+
+.splash_container__background {
+  background-color: $color-shade-dark;
+
+  &--left,
+  &--center,
+  &--right {
+    display: none;
+  }
+}
+
+.splash_interactive__button {
+  border-color: $color-shade-light;
+}
+
+.splash_interactive__button--active {
+  box-shadow: 0 0 10px 1px $color-shade-lightest;
+}
+
+.splash_interactive__window {
+  background-color: $color-base;
+  border-color: $color-shade-light;
+
+  &:hover .splash_interactive__window_headline {
+    color: $base-font-color;
+  }
+
+  &::after {
+    background: linear-gradient(to bottom, rgba($color-base, 0) 0, $color-base 100%);
+  }
+
+  &_response {
+    // This is a necessary hack to read the contents of response images.
+    background-color: #fff; // scss-lint:disable ColorVariable
+  }
+}
+
+a.splash_interactive__window_link {
+  color: $base-font-color;
+}
+
+.splash_interactive__window_message_content_text--drive {
+  color: $color-highlight;
+}
+
+.search_input.apps_search_input {
+  border-color: $color-shade-lightest;
+}
+
+.menu_launcher,
+.menu_launcher_large {
+  background-color: $color-shade-light;
+  border-color: $color-base !important;
+  color: $base-font-color;
+}
+
+.menu_launcher_large {
+  border-color: $color-base;
+}
+
+.menu.avatar_menu {
+  ul li {
+    &:hover ts-icon {
+      background: $color-shade-light;
+      color: $base-font-color;
+    }
+
+    a {
+      color: $base-font-color;
+
+      img,
+      ts-icon {
+        background-color: $color-shade-light;
+        color: $color-highlight;
+      }
+    }
+  }
+
+  &:not(.keyboard_active) ul li:hover:not(.disabled) a ts-icon {
+    color: $base-font-color;
+  }
+}
+
+#page {
+  .media_list {
+    background-color: $color-shade-dark;
+    border: 1px solid $color-shade-light;
+
+    > li {
+      + li::before {
+        border-top-color: $color-shade-light;
+      }
+
+      &.interactive {
+        a {
+          color: $base-font-color;
+
+          &:focus,
+          &:hover {
+            background: $color-shade-light;
+            border-color: $color-shade-lightest;
+          }
+        }
+      }
+
+      .media_list_text {
+        color: $base-font-color;
+      }
+    }
+
+    &.media_list_with_arrows a {
+      &::before {
+        color: $color-highlight;
+      }
+    }
+  }
+
+  .media_list_title {
+    color: $base-font-color;
+  }
+
+  .media_list_subtitle {
+    color: $color-highlight;
+  }
+
+  .sidebar_menu_list_item {
+    color: $base-font-color;
+
+    &.is_active {
+      background-color: $color-base;
+      border-color: $color-base;
+      color: $base-font-color;
+      text-shadow: 0 1px 0 $color-shadow-light;
+
+      a {
+        color: $base-font-color;
+      }
+    }
+
+    &:not(.is_active):hover {
+      background-color: $color-base;
+      border-color: $color-base;
+    }
+
+    a {
+      color: $base-font-color;
+    }
+  }
+
+  ul {
+    &.breadcrumbs {
+      li {
+        color: $color-highlight;
+
+        &:not(:first-child) {
+          &::before {
+            color: $color-highlight;
+          }
+        }
+      }
+    }
+
+    &.navigation_list {
+      li {
+        a {
+          color: $base-font-color;
+
+          &:hover {
+            background-color: $color-shade-light;
+          }
+
+          &::after {
+            color: $base-font-color;
+          }
+        }
+
+        + li a {
+          border-top: 1px solid transparent;
+        }
+      }
+    }
+  }
+
+  .tag {
+    background-color: $color-shade-darkest;
+    border: 1px solid $color-shade-dark;
+
+    &:hover {
+      background-color: $color-shade-light !important;
+    }
+  }
+
+  .app_desc_btn {
+    background-color: $color-shade-light;
+    color: $base-font-color;
+  }
+
+  .app_desc_expand_showing .app_profile_desc_fade {
+    background: linear-gradient(180deg, rgba($color-base, 0) 0, $color-base 100%);
+  }
+
+  .service_panel {
+    background-color: $color-shade-dark;
+  }
+
+  .service_card {
+    background-color: $color-base;
+    border: 1px solid $color-shade-mid;
+  }
+}
+
+.app_card,
+.large_app_card {
+  background-color: $color-base;
+  border: 1px solid $color-shade-dark;
+}
+
+nav.top {
+  &.persistent ul a {
+    color: $base-font-color;
+  }
+
+  &.apps_nav {
+    background: transparent;
+
+    &.persistent .nav_title {
+      border-color: $color-shade-lightest;
+    }
+
+    &.clear_nav {
+      .nav_title a {
+        color: $base-font-color;
+      }
+    }
+
+    .nav_title a {
+      color: $base-font-color;
+    }
+
+    ul a.active {
+      color: $base-link-color-active;
+    }
+  }
+}
+
+.plastic_typeahead {
+  background: $color-shade-dark;
+  border: 1px solid $color-shade-dark;
+  box-shadow: 0 4px 8px $color-shadow-medium;
+}
+
+.plastic_typeahead_item {
+  color: $base-font-color;
+
+  + .plastic_typeahead_item {
+    border-top: 1px solid $color-shade-light;
+  }
+
+  &:not(.plastic_typeahead_item_no_results) {
+    &.is_active {
+      background-color: $color-base;
+      border-top-color: $color-shade-dark;
+      color: $base-font-color;
+
+      ts-icon {
+        color: $color-highlight;
+      }
+    }
+
+    &:not(.is_active):hover {
+      background: $color-shade-darkest;
+      border-color: $color-shade-light;
+
+      + .plastic_typeahead_item {
+        border-color: $color-shade-light;
+      }
+    }
+  }
+}
+
+a.plastic_typeahead_item {
+  color: $base-font-color;
+}
+
+.apps_typeahead_item_media {
+  background: $color-shade-darkest;
+}
+
+.search_input_container {
+  .search_input {
+    &:focus {
+      ~ .icon_search_input {
+        color: $base-font-color;
+      }
+    }
+  }
+}
+
+.icon_search_input {
+  color: $color-highlight;
+}
+
+.quote_block {
+  color: $base-font-color;
+
+  &::before {
+    background-color: $color-shade-light;
+  }
+}
+
+.well {
+  background: $color-shade-darkest;
+  border-color: darken($color-shade-darkest, 2%);
+  color: $base-font-color;
+  text-shadow: 0 1px 1px $color-shadow-dark;
+}
+
+.service_breadcrumbs li .ts_icon,
+.service_breadcrumbs li span {
+  color: $color-highlight;
+}
+
+.c-tabs__tab_menu {
+  background-color: transparent;
+  box-shadow: inset 0 -2px 0 0 $color-shade-light;
+}
+
+.c-tabs__tab {
+  color: $color-highlight;
+
+  &:hover {
+    color: $base-font-color;
+  }
+
+  &.c-tabs__tab--active,
+  &:active,
+  &:focus {
+    box-shadow: inset 0 -2px 0 0 $color-shade-lightest;
+    color: $base-font-color;
+  }
+}
+
+.c-tabs__tab_menu--plastic {
+  background-color: transparent;
+  box-shadow: inset 0 -2px 0 0 $color-shade-light;
+}
+
+a.c-tabs__tab--plastic {
+  color: $color-highlight;
+
+  &:hover {
+    color: $base-font-color;
+  }
+
+  &.c-tabs__tab--active,
+  &:active,
+  &:focus {
+    box-shadow: inset 0 -2px 0 0 $color-shade-lightest;
+    color: $base-font-color;
+  }
+}
+
+.p-detail_scope {
+  box-shadow: inset 0 1px 0 0 $color-shade-light;
+
+  &:last-child {
+    border-bottom-color: $color-shade-light;
+  }
+}
+
+.p-detail_dangerous_scope {
+  border-left-color: $color-red;
+  border-right-color: $color-shade-light;
+}
+
+.p-detail_arrow_icon {
+  color: $color-highlight;
+
+  &:hover {
+    color: $base-font-color;
+  }
+}
+
+.p-detail_permissions {
+  background: $color-shade-dark;
+  border-color: $color-shade-light;
+}
+
+table.gray_header_border tr:first-child th:not(:only-of-type) {
+  border-bottom-color: $color-shade-light;
+}
+
+.section_rollup {
+  border-bottom-color: $color-base;
+
+  &:first-of-type {
+    border-top-color: $color-base;
+  }
+
+  &:hover:not(.is_active) {
+    background: rgba($color-base, 0.5);
+    color: $base-font-color;
+  }
+}
+
+.is_completed_section,
+.is_failed_section {
+  .section_rollup_header::before {
+    background-color: $color-green;
+    color: $color-shade-darkest;
+  }
+}
+
+.developer_apps_functionality_link {
+  &:hover {
+    border-color: $color-shade-light;
+    box-shadow: 0 0 6px 0 rgba($color-shade-lightest, 0.25);
+  }
+
+  &::before {
+    background-color: $color-shade-light;
+  }
+
+  &_enabled::before {
+    background-color: $color-green;
+  }
+}

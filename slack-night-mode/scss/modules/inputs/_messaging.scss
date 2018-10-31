@@ -1,0 +1,242 @@
+#message_edit_form {
+  .emo_menu {
+    color: rgba($base-font-color, 0.3);
+
+    &.active .ts_icon_happy_smile,
+    &:hover .ts_icon_happy_smile {
+      color: $color-shade-lightest;
+    }
+  }
+
+  &.focus {
+    .emo_menu {
+      color: rgba($base-font-color, 0.6);
+    }
+
+    #primary_file_button:not(:hover) {
+      border-color: $color-shade-dark;
+    }
+  }
+
+  &.offline {
+    #message-input,
+    #primary_file_button {
+      background-color: $color-shade-dark !important;
+    }
+
+    #primary_file_button {
+      border-color: $color-shade-mid;
+      color: $color-highlight;
+    }
+  }
+}
+
+#msg_form {
+  &.focus {
+    #msg_input,
+    #primary_file_button:not(:hover):not(.active) {
+      border-color: $color-shade-dark;
+    }
+  }
+
+  #msg_input {
+    background: padding-box $color-shade-light;
+    border-color: $color-shade-mid;
+    border-left: 0;
+    color: $base-font-color;
+
+    &.focus ~ .msg_mentions_button:not(.hover) {
+      color: $base-font-color;
+    }
+  }
+
+  .msg_mentions_button {
+    color: $color-highlight;
+
+    &:hover {
+      color: $base-font-color;
+    }
+  }
+}
+
+#msg_input {
+  @include placeholder;
+
+  background: $color-shade-light;
+  border-color: $color-shade-mid;
+  color: $base-font-color;
+
+  @if global-variable-exists(base-font-family) {
+    font-family: $base-font-family;
+  }
+
+  &:focus,
+  &.focus {
+    border-color: $color-shade-dark;
+
+    + #primary_file_button:not(:hover):not(.active) {
+      border-color: $color-shade-dark;
+    }
+  }
+
+  + #primary_file_button {
+    &:not(:hover):not(.active) {
+      border-color: $color-shade-mid;
+    }
+
+    &.focus-ring:not(:hover):not(.active) {
+      border-color: $color-shade-mid;
+    }
+  }
+
+  &.offline:not(.pretend-to-be-online) {
+    background-color: $color-shade-dark !important;
+    color: $color-highlight;
+  }
+
+  &.disabled,
+  &.ql-disabled {
+    background-color: $color-shade-dark;
+    border-color: $color-shade-dark;
+    color: $color-highlight;
+  }
+}
+
+#msg_input_message {
+  background-color: $color-shade-dark;
+  color: $base-font-color;
+}
+
+#primary_file_button {
+  background: padding-box $color-shade-light;
+  border-color: $color-shade-mid;
+  color: $color-highlight;
+
+  &.active,
+  &.focus-ring,
+  &:focus,
+  &:hover {
+    background: $color-shade-mid;
+    border-color: $color-shade-dark;
+    color: $base-font-color;
+  }
+}
+
+#footer {
+  background: $color-base;
+  box-shadow: inset 1px 0 0 0 $color-base;
+
+  &.disabled #message-input,
+  &.disabled #msg_input {
+    background: padding-box $color-shade-dark !important;
+    border-color: $color-shade-dark !important;
+  }
+
+  &.footer_msg_input {
+    @extend #footer;
+  }
+}
+
+#footer_archives_table {
+  color: $color-highlight;
+}
+
+#typing_text {
+  color: $color-highlight;
+  filter: none;
+}
+
+#notification_bar.wide #typing_text.overflow_ellipsis {
+  -webkit-filter: none;
+  filter: none;
+}
+
+#special_formatting_text {
+  color: $color-highlight;
+}
+
+#message_edit_container,
+#threads_msgs,
+#reply_container.upload_in_threads {
+  .inline_message_input_container,
+  .inline_message_input_container.with_file_upload {
+    background: $color-shade-light;
+    border-color: $color-shade-dark;
+    color: $base-font-color;
+  }
+}
+
+.inline_message_input_container .ql-container {
+  border-color: $color-shade-light;
+
+  &.focus,
+  &:active,
+  &:hover {
+    border-color: $color-shade-lightest;
+  }
+}
+
+.c-message {
+  &--editing {
+    background: $color-shade-dark;
+    border-color: $color-shade-dark;
+    color: $base-font-color;
+  }
+
+  &__editor {
+    &__input {
+      background: $color-shade-light;
+      border-color: $color-shade-dark;
+      color: $base-font-color;
+
+      &.focus {
+        border-color: $color-shade-dark;
+        box-shadow: 0 0 7px $color-shadow-light;
+      }
+    }
+
+    &__warning {
+      color: $color-red;
+    }
+  }
+}
+
+#message_edit_container .message_input {
+  background: $color-shade-light;
+  border-color: $color-shade-dark;
+  color: $base-font-color;
+
+  &.focus {
+    border-color: $color-shade-dark;
+    box-shadow: 0 0 7px $color-shadow-light;
+  }
+}
+
+.ql-editor {
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba($color-shade-light, 0.5);
+    color: $color-base;
+
+    &:hover {
+      background-color: rgba($color-shade-light, 0.8);
+    }
+  }
+}
+
+.ql-placeholder,
+.texty_legacy .ql-placeholder {
+  color: $base-font-color;
+  filter: none;
+}
+
+.ql-container.texty_single_line_input {
+  background: $color-shade-light;
+  border: 1px solid $color-shade-dark;
+  color: $base-font-color;
+
+  &.focus,
+  &:hover {
+    border-color: $color-shade-dark;
+    box-shadow: 0 0 7px $color-shadow-light;
+  }
+}
