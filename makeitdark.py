@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from sys import platform, argv
 import os
 if len(argv) != 1:
