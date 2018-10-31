@@ -21,49 +21,11 @@ injectable = "/* BEGIN makeitdark */ \n\
     const cssPath = 'https://raw.githubusercontent.com/ahayworth/makeitdark/master/slack-night-mode/css/raw/black.css';  \n\
     let cssPromise = fetch(cssPath).then(response => response.text());  \n\
    \n\
-    let customCustomCSS = `  \n\
-    :root {  \n\
-        /* Modify these to change your theme colors: */  \n\
-        --primary: #61AFEF;  \n\
-        --text: #00FF00;  \n\
-    }  \n\
-    div.c-message.c-message--light.c-message--hover {  \n\
-        color: #00FF00 !important;  \n\
-    }  \n\
-   \n\
-    a.c-message__sender_link { color: #FFFFFF !important; }  \n\
-   \n\
-    span.c-message__body, span.c-message_attachment__media_trigger.c-message_attachment__media_trigger--caption,  \n\
-    div.p-message_pane__foreword__description span {  \n\
-        color: #00FF00 !important;  \n\
-        font-family: \"Fira Code\", Arial, Helvetica, sans-serif;  \n\
-        text-rendering: optimizeLegibility;  \n\
-        font-size: 14px;  \n\
-    }  \n\
-   \n\
-    div.c-virtual_list__scroll_container {  \n\
-        background-color: #080808 !important;  \n\
-    }  \n\
-   \n\
-    .p-message_pane .c-message_list:not(.c-virtual_list--scrollbar),  \n\
-    .p-message_pane .c-message_list.c-virtual_list--scrollbar > .c-scrollbar__hider {  \n\
-        z-index: 0;  \n\
-    }  \n\
-   \n\
-   \n\
-    div.c-message__content:hover {  \n\
-        background-color: #080808 !important;  \n\
-    }  \n\
-   \n\
-    div.c-message:hover {  \n\
-        background-color: #080808 !important;  \n\
-    }`  \n\
-   \n\
     /* Insert a style tag into the wrapper view */  \n\
     cssPromise.then(css => {  \n\
         let s = document.createElement('style');  \n\
         s.type = 'text/css';  \n\
-        s.innerHTML = css + customCustomCSS;  \n\
+        s.innerHTML = css;  \n\
         document.head.appendChild(s);  \n\
     });  \n\
    \n\
@@ -77,7 +39,7 @@ injectable = "/* BEGIN makeitdark */ \n\
                     let s = document.createElement('style');  \n\
                     s.type = 'text/css';  \n\
                     s.id = 'slack-custom-css';  \n\
-                    s.innerHTML = \`${css + customCustomCSS}\`;  \n\
+                    s.innerHTML = \`${css}\`;  \n\
                     document.head.appendChild(s);  \n\
                 `  \n\
                 webview.executeJavaScript(script);  \n\
