@@ -16,7 +16,7 @@ injectable = "/* BEGIN makeitdark */ \n\
     let webviews = document.querySelectorAll(\".TeamView webview\");  \n\
    \n\
     /* Fetch CSS in parallel ahead of time from cdn host */  \n\
-    const cssPath = 'https://cdn.rawgit.com/laCour/slack-night-mode/master/css/raw/black.css';  \n\
+    const cssPath = 'https://raw.githubusercontent.com/ahayworth/makeitdark/master/slack-night-mode/css/raw/black.css';  \n\
     let cssPromise = fetch(cssPath).then(response => response.text());  \n\
    \n\
     let customCustomCSS = `  \n\
