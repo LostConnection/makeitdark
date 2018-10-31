@@ -1,0 +1,3 @@
+[submodule "slack-night-mode"]
+	path = slack-night-mode
+	url = https://github.com/laCour/slack-night-mode
