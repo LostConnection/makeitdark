@@ -39,3 +39,10 @@ Or use this one which kinda makes it look like Mojave dark mode, from [slackthem
 ```
 #333336,#2e2e31,#666668,#ffffff,#277df6,#d7d5d4,#277df6,#277df6
 ```
+
+### Reverting
+
+If you want to uninstall the dark Slack theme you can run with the `makeitlight` option:
+```
+makeitdark.py makeitlight
+```
