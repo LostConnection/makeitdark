@@ -28,6 +28,11 @@ python3
 ```bash
 sudo python3 makeitdark.py
 ```
+
+windows
+```bash
+python makeitdark.py
+```
 ### Sidebar
 
 Use the following custom Slack sidebar theme to make it consistent:
