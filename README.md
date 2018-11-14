@@ -25,6 +25,7 @@ sudo python makeitdark.py
 ```
 ```bash
 sudo python3 makeitdark.py
+```
 
 Windows
 ```bash
