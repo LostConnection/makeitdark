@@ -19,11 +19,14 @@ Don't trust me - fork the repo.
 
 ### Running
 
+Unix
 ```bash
-python makeitdark.py
+sudo python makeitdark.py
 ```
+```bash
+sudo python3 makeitdark.py
 
-windows
+Windows
 ```bash
 python makeitdark.py
 ```
