@@ -22,6 +22,11 @@ Don't trust me - fork the repo.
 ```bash
 python makeitdark.py
 ```
+
+windows
+```bash
+python makeitdark.py
+```
 ### Sidebar
 
 Use the following custom Slack sidebar theme to make it consistent:
