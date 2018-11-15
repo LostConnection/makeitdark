@@ -2,16 +2,21 @@
 
 from sys import platform, argv
 import os
+
+# Markers for the injected css content
+BEGIN_MARKER = "/* BEGIN makeitdark */"
+END_MARKER = "/* END makeitdark */"
+
+undo_mode = False
+
 if len(argv) != 1:
     if argv[1] == "makeitlight":
         undo_mode = True
     else:
         print("run 'python ./makeitdark.py makeitlight' to undo the changes")
         exit()
-else:
-    undo_mode = False
 
-injectable = "/* BEGIN makeitdark */ \n\
+injectable = BEGIN_MARKER + " \n\
    document.addEventListener(\"DOMContentLoaded\", function() {  \n\
    \n\
     /* Then get its webviews */  \n\
@@ -46,8 +51,7 @@ injectable = "/* BEGIN makeitdark */ \n\
             })  \n\
         });  \n\
     });  \n\
-}); \n\
-/* END makeitdark */ "
+}); \n " + END_MARKER
 
 slack_theme_path = ""
 
@@ -70,25 +74,26 @@ else:
 if undo_mode:
     with open(slack_theme_path, "r+") as f:
         s = ""
-        if "/* BEGIN makeitdark */" not in f.read():
-            print("Didn't make it dark yet")
+        if BEGIN_MARKER not in f.read():
+            print("Your slack theme is not dark yet")
             exit()
         else:
-            f.seek(0,0)
+            f.seek(0, 0)
         for line in f:
-            if '/* BEGIN' not in line:
+            if BEGIN_MARKER not in line:
                 s = s + line
             else:
-                f.seek(0,0)
+                f.seek(0, 0)
                 f.truncate()
                 f.write(s)
-                print("lightened")
+                f.close()
+                print("Your slack theme has been updated, please restart slack")
                 exit()
 
 else:
     with open(slack_theme_path, "r+") as f:
-        if "/* BEGIN makeitdark */" in f.read():
-            print("Already made it dark")
+        if BEGIN_MARKER in f.read():
+            print("Your slack theme is already dark")
             exit()
         else:
             f.seek(0, 2)
