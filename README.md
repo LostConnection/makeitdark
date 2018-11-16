@@ -33,12 +33,7 @@ python makeitdark.py
 ```
 ### Sidebar
 
-Use the following custom Slack sidebar theme to make it consistent:
-```
-#000000,#000000,#00ff00,#00ff00,#00ff00,#00ff00,#31f700,#ff0000
-```
-
-Or use this one which kinda makes it look like Mojave dark mode, from [slackthemes.net](https://slackthemes.net):
+Add this sidebar theme for consistency which kinda makes it look like Mojave dark mode, from [slackthemes.net](https://slackthemes.net):
 ```
 #333336,#2e2e31,#666668,#ffffff,#277df6,#d7d5d4,#277df6,#277df6
 ```
