@@ -44,3 +44,7 @@ If you want to uninstall the dark Slack theme you can run with the `makeitlight`
 ```
 makeitdark.py makeitlight
 ```
+
+### Slack Updates
+
+When Slack updates it will overwrite the installed dark theme. When this happens just re-run the tool to make it dark again.
