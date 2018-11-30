@@ -7,6 +7,10 @@ Array.from(document.querySelectorAll('.darkreader')).map((n) => n.textContent).j
 
 ```
 
+Sample screenshot:
+
+![Sample screenshot of dark Slack theme](sample-screenshot01.png)
+
 ### Prerequisites
 
 Install [python](https://www.python.org/)
