@@ -6,6 +6,7 @@ theme that was applied when I visited the web version of slack, like so:
 Array.from(document.querySelectorAll('.darkreader')).map((n) => n.textContent).join('\n');
 
 ```
+![](slack-light.gif)
 
 Sample screenshot:
 
