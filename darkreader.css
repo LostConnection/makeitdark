@@ -1,6 +1,4 @@
 
-
-
 [data-darkreader-inline-bgcolor] {
   background-color: var(--darkreader-inline-bgcolor) !important;
 }
@@ -21914,4 +21912,21 @@ input[type="text"].p-channel_sidebar__folder_heading_label_rename:hover {
 body.has_loading_trouble #trouble_loading_overlay {
     background-image: initial;
     background-color: #23272f;
+}
+
+.slack_logo > img {
+    filter: invert(100%) hue-rotate(180deg) contrast(90%) !important;
+}
+
+.jfk-bubble {
+    background-color: #000000 !important;
+}
+.vimvixen-hint {
+    background-color: #7b5300 !important;
+    border-color: #d8b013 !important;
+    color: #f3e8c8 !important;
+}
+
+.p-threads_view__default_background, .p-threads_view {
+    background-color: #17181c !important;
 }
