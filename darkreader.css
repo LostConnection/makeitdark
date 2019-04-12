@@ -21940,15 +21940,15 @@ body.has_loading_trouble #trouble_loading_overlay {
 }
 
 .p-threads_view_root {
-    border-top-color: rgb(58, 58, 58);
-    border-right-color: rgb(58, 58, 58);
-    border-left-color: rgb(58, 58, 58);
+    border-top-color: rgb(58, 58, 58) !important;
+    border-right-color: rgb(58, 58, 58) !important;
+    border-left-color: rgb(58, 58, 58) !important;
 }
 
 .p-threads_view__footer {
-    border-right-color: rgb(58, 58, 58);
-    border-bottom-color: rgb(58, 58, 58);
-    border-left-color: rgb(58, 58, 58);
+    border-right-color: rgb(58, 58, 58) !important;
+    border-bottom-color: rgb(58, 58, 58) !important;
+    border-left-color: rgb(58, 58, 58) !important;
 }
 
 .p-threads_view_reply--new_reply {
