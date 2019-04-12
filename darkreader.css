@@ -21927,8 +21927,6 @@ body.has_loading_trouble #trouble_loading_overlay {
     color: #f3e8c8 !important;
 }
 
-
-# Styles for the All Threads page
 .p-threads_view,
 .p-threads_view__default_background,
 .p_threads_view_load_older_button,
