@@ -21956,3 +21956,13 @@ body.has_loading_trouble #trouble_loading_overlay {
     border-top-color: initial;
     border-bottom-color: initial;
 }
+
+.c-channel_name {
+    background-image: none;
+    background-color: initial;
+    border-top-color: initial;
+    border-right-color: initial;
+    border-bottom-color: initial;
+    border-left-color: initial;
+    color: inherit;
+}
