@@ -21927,6 +21927,7 @@ body.has_loading_trouble #trouble_loading_overlay {
     color: #f3e8c8 !important;
 }
 
+/* All Threads Tab */
 .p-threads_view,
 .p-threads_view__default_background,
 .p_threads_view_load_older_button,
@@ -22007,4 +22008,12 @@ body.has_loading_trouble #trouble_loading_overlay {
     border-right-color: rgb(66, 66, 67) !important;
     border-bottom-color: rgb(66, 66, 67) !important;
     border-left-color: rgb(66, 66, 67) !important;
+}
+
+/* View thread container */
+.c-icon_button--light, .c-icon_button--light.c-button-unstyled, .c-icon_button--light:link {
+    color: rgba(222, 219, 214, 0.7);
+}
+.c-icon_button--light, .c-icon_button--light.c-button-unstyled, .c-icon_button--light:link {
+    color: rgba(29,28,29,.7);
 }
