@@ -21934,6 +21934,10 @@ body.has_loading_trouble #trouble_loading_overlay {
     background-color: #17181c !important;
 }
 
+.p_threads_view_load_newer_button, .p_threads_view_load_older_button {
+    border-left-color: rgb(58, 58, 58);
+    border-right-color: rgb(58, 58, 58);
+}
 
 .p-threads_view_reply--new_reply {
     background-color: #0c2a35 !important;
@@ -21964,5 +21968,5 @@ body.has_loading_trouble #trouble_loading_overlay {
     border-right-color: initial;
     border-bottom-color: initial;
     border-left-color: initial;
-    color: inherit;
+    color: rgb(222, 219, 214);
 }
