@@ -21934,12 +21934,6 @@ body.has_loading_trouble #trouble_loading_overlay {
     background-color: #17181c !important;
 }
 
-.p_threads_view_load_newer_button, .p_threads_view_load_older_button {
-    background-image: initial;
-    background-color: rgb(24, 26, 27);
-    border-left-color: rgb(58, 58, 58);
-    border-right-color: rgb(58, 58, 58);
-}
 
 .p-threads_view_reply--new_reply {
     background-color: #0c2a35 !important;
@@ -21983,14 +21977,4 @@ body.has_loading_trouble #trouble_loading_overlay {
     border-bottom-right-radius: 12px;
     margin-bottom: 24px;
     padding-top: 8px;
-}
-
-.c-channel_name {
-    background-image: none;
-    background-color: initial;
-    border-top-color: initial;
-    border-right-color: initial;
-    border-bottom-color: initial;
-    border-left-color: initial;
-    color: inherit;
 }
