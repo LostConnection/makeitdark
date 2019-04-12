@@ -21939,6 +21939,18 @@ body.has_loading_trouble #trouble_loading_overlay {
     border-right-color: rgb(58, 58, 58);
 }
 
+.p-threads_view_root {
+    border-top-color: rgb(58, 58, 58);
+    border-right-color: rgb(58, 58, 58);
+    border-left-color: rgb(58, 58, 58);
+}
+
+.p-threads_view__footer {
+    border-right-color: rgb(58, 58, 58);
+    border-bottom-color: rgb(58, 58, 58);
+    border-left-color: rgb(58, 58, 58);
+}
+
 .p-threads_view_reply--new_reply {
     background-color: #0c2a35 !important;
 }
