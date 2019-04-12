@@ -21982,3 +21982,29 @@ body.has_loading_trouble #trouble_loading_overlay {
     border-left-color: initial;
     color: rgb(222, 219, 214);
 }
+
+.p-threads_view_header__participant_list {
+    color: rgb(197, 193, 184);
+}
+
+.p-threads_footer__input--legacy .p-message_input_file_button {
+    border-top-color: rgb(75, 75, 75);
+    border-right-color: rgb(75, 75, 75);
+    border-bottom-color: rgb(75, 75, 75);
+    border-left-color: rgb(75, 75, 75);
+    background-image: initial;
+    background-color: rgb(24, 26, 27);
+}
+
+.p-threads_footer__input .p-message_input_file_button {
+    color: rgb(186, 181, 171);
+}
+
+.p-threads_footer__input .p-message_input_field {
+    background-image: initial;
+    background-color: rgb(24, 26, 27);
+    border-top-color: rgb(66, 66, 67);
+    border-right-color: rgb(66, 66, 67);
+    border-bottom-color: rgb(66, 66, 67);
+    border-left-color: rgb(66, 66, 67);
+}
