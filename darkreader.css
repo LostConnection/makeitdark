@@ -22012,8 +22012,8 @@ body.has_loading_trouble #trouble_loading_overlay {
 
 /* View thread container */
 .c-icon_button--light, .c-icon_button--light.c-button-unstyled, .c-icon_button--light:link {
-    color: rgba(222, 219, 214, 0.7);
+    color: rgba(222, 219, 214, 0.7) !important;
 }
 .c-icon_button--light, .c-icon_button--light.c-button-unstyled, .c-icon_button--light:link {
-    color: rgba(29,28,29,.7);
+    color: rgba(29,28,29,.7) !important;
 }
