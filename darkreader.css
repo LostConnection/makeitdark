@@ -21963,7 +21963,6 @@ body.has_loading_trouble #trouble_loading_overlay {
     border-bottom-color: initial;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
-    border: 1px solid #ddd;
     border-bottom: none;
 }
 
