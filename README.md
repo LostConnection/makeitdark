@@ -45,6 +45,12 @@ Or add [this sidebar theme](https://slackthemes.net/#/custom#17181c,252525,A36B3
 ```
 #17181c,#252525,#A36B31,#D2D6D6,#5C6380,#DEDEDE,#ADBA4E,#DB6668
 ```
+
+Or [this one](https://slackthemes.net/#/custom#1b1c21,2a323e,0576b9,FFFFFF,2a323e,FFFFFF,62c462,ff9000), to make the colors match exactly:
+```
+#1b1c21,#2a323e,#0576b9,#FFFFFF,#2a323e,#FFFFFF,#62c462,#ff9000
+```
+
 You can fiddle around with custom sidebar themes at https://slackthemes.net
 
 ### Reverting
