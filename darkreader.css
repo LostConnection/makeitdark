@@ -27427,6 +27427,11 @@ body.has_loading_trouble #trouble_loading_overlay {
     background-color: #17181c !important;
 }
 
+.p-threads_view__divider_label {
+    background: #17181c;
+    color: inherit;
+}
+
 .p_threads_view_load_newer_button, .p_threads_view_load_older_button {
     border-left-color: rgb(58, 58, 58);
     border-right-color: rgb(58, 58, 58);
