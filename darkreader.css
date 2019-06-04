@@ -27522,25 +27522,38 @@ body.has_loading_trouble #trouble_loading_overlay {
     }
 }
 
-.c-message_kit__background--deleting {
-    background: rgba(24, 26, 27, .6) !important;
-    overflow: hidden
-}
-
-.c-focus_manage_list__item {
-    background: #17181c;
-}
+/* Advanced channel search */
 .c-channel_search_result__channel {
     color: rgb(186, 181, 171);
     background: #17181c;
 }
-
 .p-search_filter__select .c-input_select {
     color: #fff;
 }
+.c-message_kit__background--deleting {
+    background: rgba(24, 26, 27, .6) !important;
+    overflow: hidden
+}
+.c-focus_manage_list__item {
+    background: #17181c;
+}
 
+/* Radiobutton selections in preferences */
 .p-prefs_modal__radiogroup label.p-prefs_modal__radiogroup--selected,
 .p-prefs_modal__radiogroup .p-prefs_modal__radio_decorator,
 .p-prefs_modal__radiogroup .p-prefs_modal__radio_decorator > div {
     background: none !important;
+}
+
+/* Create post screen */
+nav.space,
+nav .space_buttons .ts_icon {
+    background: #17181c;
+}
+nav #space_status {
+    border-left: none;
+}
+ts-space header .owner_detail .inline-edit,
+ts-rocket, ts-rocket.post_body {
+    color: #fff;
 }
