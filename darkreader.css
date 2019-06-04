@@ -27546,7 +27546,7 @@ body.has_loading_trouble #trouble_loading_overlay {
 }
 
 /* Create post screen */
-nav.space,
+nav .space,
 nav .space_buttons .ts_icon {
     background: #17181c;
 }
