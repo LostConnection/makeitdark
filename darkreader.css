@@ -27534,3 +27534,13 @@ body.has_loading_trouble #trouble_loading_overlay {
     color: rgb(186, 181, 171);
     background: #17181c;
 }
+
+.p-search_filter__select .c-input_select {
+    color: #fff;
+}
+
+.p-prefs_modal__radiogroup label.p-prefs_modal__radiogroup--selected,
+.p-prefs_modal__radio_decorator,
+.p-prefs_modal__notification_example {
+    background: none;
+}
