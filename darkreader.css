@@ -27524,8 +27524,11 @@ body.has_loading_trouble #trouble_loading_overlay {
 
 /* Advanced channel search */
 .c-channel_search_result__channel {
-    color: rgb(186, 181, 171);
+    color: rgb(222, 219, 214);
     background: #17181c;
+}
+.c-channel_search_result__metadata {
+    color: rgb(222, 219, 214);
 }
 .p-search_filter__select .c-input_select {
     color: #fff;
