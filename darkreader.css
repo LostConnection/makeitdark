@@ -27515,14 +27515,22 @@ body.has_loading_trouble #trouble_loading_overlay {
 
 @keyframes highlight {
     20% {
-        background: rgb(24, 26, 27)
+        background: rgb(24, 26, 27) !important;
     }
     60% {
-        background: rgb(24, 26, 27)
+        background: rgb(24, 26, 27) !important;
     }
 }
 
 .c-message_kit__background--deleting {
-    background: rgba(24, 26, 27, .6);
+    background: rgba(24, 26, 27, .6) !important;
     overflow: hidden
+}
+
+.c-focus_manage_list__item {
+    background: #17181c;
+}
+.c-channel_search_result__channel {
+    color: rgb(186, 181, 171);
+    background: #17181c;
 }
