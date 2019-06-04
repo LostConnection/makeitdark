@@ -27557,3 +27557,12 @@ ts-space header .owner_detail .inline-edit,
 ts-rocket, ts-rocket.post_body {
     color: #fff;
 }
+
+/* Dropdown selection in preferences */
+.c-select_options_list__wrapper {
+    background: #17181c;
+    border: rgb(150,150,150) 1px solid
+}
+.c-select_options_list__option {
+    color: rgb(222, 219, 214);
+}
