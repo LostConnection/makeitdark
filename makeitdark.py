@@ -23,7 +23,7 @@ injectable = BEGIN_MARKER + " \n\
     let webviews = document.querySelectorAll(\".TeamView webview\");  \n\
    \n\
     /* Fetch CSS in parallel ahead of time from cdn host */  \n\
-    const cssPath = 'https://raw.githubusercontent.com/jszklarz-haventec/makeitdark/master/darkreader.css';  \n\
+    const cssPath = 'https://raw.githubusercontent.com/LostConnection/makeitdark/master/darkreader.css';  \n\
     let cssPromise = fetch(cssPath).then(response => response.text());  \n\
    \n\
     /* Insert a style tag into the wrapper view */  \n\
