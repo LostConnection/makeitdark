@@ -27542,5 +27542,5 @@ body.has_loading_trouble #trouble_loading_overlay {
 .p-prefs_modal__radiogroup label.p-prefs_modal__radiogroup--selected,
 .p-prefs_modal__radio_decorator,
 .p-prefs_modal__notification_example {
-    background: none;
+    background: none !important;
 }
