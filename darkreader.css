@@ -27579,3 +27579,15 @@ ts-rocket, ts-rocket.post_body {
 textarea.c-input_textarea.c-input_textarea--with_hint {
     color: #fff;
 }
+
+/* Message edit */
+.c-message__editor__input--legacy.focus {
+    border-top-color: #1573bc;
+    border-right-color: #1573bc;
+    border-bottom-color: #1573bc;
+    border-left-color: #1573bc;
+}
+.c-message__editor__input--legacy {
+    background-color: #181a1b;
+    color: #dedbd6;
+}
