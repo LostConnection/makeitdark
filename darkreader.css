@@ -27591,3 +27591,15 @@ textarea.c-input_textarea.c-input_textarea--with_hint {
     background-color: #181a1b;
     color: #dedbd6;
 }
+
+/* loading overlay */
+.loading #loading-zone {
+    background: #17181c;
+    color: #e8e6e3;
+}
+.p-message_container_loading {
+    background: #17181c !important;
+}
+.p-message_container_loading__msg {
+    color: #e8e6e3 !important;
+}
