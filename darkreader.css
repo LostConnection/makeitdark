@@ -27532,16 +27532,20 @@ body.has_loading_trouble #trouble_loading_overlay {
     color: rgb(222, 219, 214);
     background: #17181c;
 }
+
 .c-channel_search_result__metadata {
     color: rgb(222, 219, 214);
 }
+
 .p-search_filter__select .c-input_select {
     color: #fff;
 }
+
 .c-message_kit__background--deleting {
     background: rgba(24, 26, 27, .6) !important;
     overflow: hidden
 }
+
 .c-focus_manage_list__item {
     background: #17181c;
 }
@@ -27558,9 +27562,11 @@ nav .space,
 nav .space_buttons .ts_icon {
     background: #17181c !important;
 }
+
 nav #space_status {
     border-left: none;
 }
+
 ts-space header .owner_detail .inline-edit,
 ts-rocket, ts-rocket.post_body {
     color: #fff;
@@ -27569,8 +27575,9 @@ ts-rocket, ts-rocket.post_body {
 /* Dropdown selection in preferences */
 .c-select_options_list__wrapper {
     background: #17181c;
-    border: rgb(150,150,150) 1px solid
+    border: rgb(150, 150, 150) 1px solid
 }
+
 .c-select_options_list__option {
     color: rgb(222, 219, 214);
 }
@@ -27587,7 +27594,32 @@ textarea.c-input_textarea.c-input_textarea--with_hint {
     border-bottom-color: #1573bc;
     border-left-color: #1573bc;
 }
+
 .c-message__editor__input--legacy {
     background-color: #181a1b;
     color: #dedbd6;
+}
+
+/* loading overlay */
+.loading #loading-zone {
+    background: #17181c;
+    color: #e8e6e3;
+}
+
+.p-message_container_loading {
+    background: #17181c !important;
+}
+
+.p-message_container_loading__msg {
+    color: #e8e6e3 !important;
+}
+
+/* view preview */
+@keyframes fade-background-highlight {
+    0% {
+        background: #3b3c40;
+    }
+    to {
+        background: transparent;
+    }
 }
