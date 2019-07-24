@@ -54,6 +54,8 @@ injectable = BEGIN_MARKER + " \n\
 }); \n " + END_MARKER
 
 slack_theme_path = ""
+print("This script is only intended for usage with Slack versions < 4.0")
+print("For 4.0 support, run sudo ./makeitdark.sh")
 
 if platform == "linux" or platform == "linux2":
     # linux
