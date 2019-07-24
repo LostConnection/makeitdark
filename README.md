@@ -23,7 +23,15 @@ Don't trust me - fork the repo.
 
 ### Running
 
+#####Slack 4.0+
+
 ```sudo ./makeitdark.sh```
+
+#####Slack 3.4.x
+
+Requires [python](https://www.python.org/)
+
+```sudo python3 makeitdark.py```
 
 ### Sidebar
 
