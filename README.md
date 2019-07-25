@@ -15,6 +15,8 @@ Array.from(document.querySelectorAll('.darkreader')).map((n) => n.textContent).j
 
 Install [nodejs](https://nodejs.org/)
 
+Install [python](https://www.python.org/)
+
 You _really_ should take the css file from this site, and host it somewhere _you_ control. It's
 not a great idea to have a script inject an arbitrary CSS file from a domain outside of your control,
 into an application like Slack that could have sensitive data.
@@ -22,14 +24,6 @@ into an application like Slack that could have sensitive data.
 Don't trust me - fork the repo.
 
 ### Running
-
-##### Slack 4.0+
-
-```sudo ./makeitdark.sh```
-
-##### Slack 3.4.x
-
-Requires [python](https://www.python.org/)
 
 ```sudo python3 makeitdark.py```
 
