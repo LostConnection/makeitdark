@@ -3,17 +3,23 @@
 from sys import platform, argv
 import os
 
+
+def apply_sudo(sudo, command):
+    return "sudo " + command if sudo else command
+
+
 # Unpacks the Slack app and returns the ssb-interop.bundle.js file path
-def unpack_app(packed_path):
-    unpack_command = "sudo npx asar extract {0}/app.asar {0}/app.asar.unpacked".format(slack_packed_path)
+def unpack_app(sudo, packed_path):
+    unpack_command = apply_sudo(sudo, "npx asar extract {0}/app.asar {0}/app.asar.unpacked".format(packed_path))
     os.system(unpack_command)
-    return "{0}/app.asar.unpacked/dist/ssb-interop.bundle.js".format(slack_packed_path)
+    return "{0}/app.asar.unpacked/dist/ssb-interop.bundle.js".format(packed_path)
+
 
 # Removes the previously packed app and repacks it.
-def pack_app(packed_path):
-    remove_packed_command = "sudo rm -rf {0}/app.asar".format(packed_path)
+def pack_app(sudo, packed_path):
+    remove_packed_command = apply_sudo(sudo, "rm -rf {0}/app.asar".format(packed_path))
     os.system(remove_packed_command)
-    pack_command = "sudo npx asar pack {0}/app.asar.unpacked {0}/app.asar".format(packed_path)
+    pack_command = apply_sudo(sudo, "npx asar pack {0}/app.asar.unpacked {0}/app.asar".format(packed_path))
     os.system(pack_command)
     return
 
@@ -69,6 +75,7 @@ injectable = BEGIN_MARKER + " \n\
 }); \n " + END_MARKER
 
 slack_packed_path = ""
+require_sudo = True
 
 if platform == "linux" or platform == "linux2":
     # linux
@@ -80,6 +87,7 @@ elif platform == "darwin":
     slack_packed_path = "/Applications/Slack.app/Contents/Resources"
 else:
     # Probably Windows
+    require_sudo = False
     for root in os.environ['LOCALAPPDATA'], os.environ['PROGRAMFILES']:
         slack_root_path = os.path.join(root, "slack")
         slack_versions = sorted([slack_version for slack_version in os.listdir(slack_root_path) if
@@ -99,7 +107,7 @@ else:
         raise EnvironmentError("Could not find slack installation")
 
 # Unpack the Slack App
-slack_theme_path = unpack_app(slack_packed_path)
+slack_theme_path = unpack_app(require_sudo, slack_packed_path)
 
 if undo_mode:
     with open(slack_theme_path, "r+") as f:
@@ -117,7 +125,7 @@ if undo_mode:
                 f.truncate()
                 f.write(s)
                 f.close()
-                pack_app(slack_packed_path)
+                pack_app(require_sudo, slack_packed_path)
                 print("Your slack theme has been updated, please restart slack")
                 exit()
 else:
@@ -129,6 +137,6 @@ else:
             f.seek(0, 2)
             f.write("\n" + injectable)
             f.close()
-            pack_app(slack_packed_path)
+            pack_app(require_sudo, slack_packed_path)
             print("Your slack theme has been updated, please restart slack")
             exit()
