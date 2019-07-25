@@ -25,7 +25,18 @@ Don't trust me - fork the repo.
 
 ### Running
 
-```sudo python3 makeitdark.py```
+Unix
+```bash
+sudo python makeitdark.py
+```
+```bash
+sudo python3 makeitdark.py
+```
+
+Windows
+```bash
+python makeitdark.py
+```
 
 ### Sidebar
 
