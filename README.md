@@ -25,7 +25,7 @@ Don't trust me - fork the repo.
 
 ### Running
 
-Unix
+#### Unix
 ```bash
 sudo python makeitdark.py
 ```
@@ -33,7 +33,7 @@ sudo python makeitdark.py
 sudo python3 makeitdark.py
 ```
 
-Windows
+#### Windows
 Make sure Slack is NOT running, then execute:
 ```bash
 python makeitdark.py
