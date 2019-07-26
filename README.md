@@ -34,6 +34,7 @@ sudo python3 makeitdark.py
 ```
 
 Windows
+Make sure Slack is NOT running, then execute:
 ```bash
 python makeitdark.py
 ```
