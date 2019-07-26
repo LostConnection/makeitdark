@@ -27623,3 +27623,52 @@ textarea.c-input_textarea.c-input_textarea--with_hint {
         background: transparent;
     }
 }
+
+/* Windows-specific header/footer */
+.p-classic_nav__channel_header,
+.p-classic_nav__right_header.p-classic_nav__right_header--whats_new_showing,
+footer.p-workspace__primary_view_footer {
+    background-color: #17181c !important;
+}
+div.p-workspace__input.p-message_input > div {
+    background-color: rgb(24, 26, 27);
+}
+.p-classic_nav__model__title__info.p-classic_nav__no_drag,
+.p-classic_nav__channel_header__subtitle,
+.p-classic_nav__right__search__icon,
+.p-classic_nav__no_drag,
+.p-classic_nav__right__search__placeholder,
+.p-classic_nav__right__search:hover {
+    color: #d6d4cf !important;
+}
+/* Windows Unreads */
+div.c-scrollbar__child > div.c-virtual_list__scroll_container,
+.p-unreads_view__header {
+    background-color: #17181c !important;
+}
+/* Secondary view */
+.p-workspace__secondary_view {
+    background-color: #17181c !important;
+}
+/* Calendar view */
+.c-date_picker_calendar__date {
+    color: #d6d4cf;
+}
+.c-date_picker_calendar__date--is_today {
+    color: #0c7db6;
+}
+.c-date_picker_calendar__date--disabled {
+    color: red
+}
+/* Add channel */
+.p-channel_name_input__label_title > strong,
+.p-channel_create_modal__label_title > strong,
+.p-invite_users_input__label_title > strong {
+    color: #d6d4cf;
+}
+/* Add channel input subtext */
+.p-channel_create_modal__input_subtext,
+.p-invite_users_input__input_subtext,
+.p-channel_create_modal__private_toggle_copy_body {
+    color: #bdb9b2;
+}
