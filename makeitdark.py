@@ -110,7 +110,7 @@ else:
 slack_theme_path = unpack_app(require_sudo, slack_packed_path)
 
 if undo_mode:
-    with open(slack_theme_path, "r+") as f:
+    with open(slack_theme_path, "r+", encoding="utf8") as f:
         s = ""
         if BEGIN_MARKER not in f.read():
             print("Your slack theme is not dark yet")
@@ -129,7 +129,7 @@ if undo_mode:
                 print("Your slack theme has been updated, please restart slack")
                 exit()
 else:
-    with open(slack_theme_path, "r+") as f:
+    with open(slack_theme_path, "r+", encoding="utf8") as f:
         if BEGIN_MARKER in f.read():
             print("Your slack theme is already dark")
             exit()
