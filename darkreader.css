@@ -27626,7 +27626,8 @@ textarea.c-input_textarea.c-input_textarea--with_hint {
 
 /* Windows-specific header/footer */
 .p-classic_nav__channel_header,
-.p-classic_nav__right_header.p-classic_nav__right_header--whats_new_showing,
+.p-classic_nav__right_header,
+.p-classic_nav__right_header--whats_new_showing,
 footer.p-workspace__primary_view_footer {
     background-color: #17181c !important;
 }
@@ -27643,7 +27644,9 @@ div.p-workspace__input.p-message_input > div {
 }
 /* Windows Unreads */
 div.c-scrollbar__child > div.c-virtual_list__scroll_container,
-.p-unreads_view__header {
+.p-unreads_view__header,
+.c-virtual_list,
+.p-unreads_view__empty {
     background-color: #17181c !important;
 }
 /* Secondary view */
@@ -27671,4 +27674,9 @@ div.c-scrollbar__child > div.c-virtual_list__scroll_container,
 .p-invite_users_input__input_subtext,
 .p-channel_create_modal__private_toggle_copy_body {
     color: #bdb9b2;
+}
+/* Windows user popup */
+.p-member_profile_card, .p-member_profile_card * {
+    background-color: #17181c !important;
+    color: #d6d4cf !important;
 }
