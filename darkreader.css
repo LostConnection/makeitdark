@@ -27631,9 +27631,11 @@ textarea.c-input_textarea.c-input_textarea--with_hint {
 footer.p-workspace__primary_view_footer {
     background-color: #17181c !important;
 }
+
 div.p-workspace__input.p-message_input > div {
     background-color: rgb(24, 26, 27);
 }
+
 .p-classic_nav__model__title__info.p-classic_nav__no_drag,
 .p-classic_nav__channel_header__subtitle,
 .p-classic_nav__right__search__icon,
@@ -27642,6 +27644,7 @@ div.p-workspace__input.p-message_input > div {
 .p-classic_nav__right__search:hover {
     color: #d6d4cf !important;
 }
+
 /* Windows Unreads */
 div.c-scrollbar__child > div.c-virtual_list__scroll_container,
 .p-unreads_view__header,
@@ -27649,34 +27652,47 @@ div.c-scrollbar__child > div.c-virtual_list__scroll_container,
 .p-unreads_view__empty {
     background-color: #17181c !important;
 }
+
 /* Secondary view */
 .p-workspace__secondary_view {
     background-color: #17181c !important;
 }
+
 /* Calendar view */
 .c-date_picker_calendar__date {
     color: #d6d4cf;
 }
+
 .c-date_picker_calendar__date--is_today {
     color: #0c7db6;
 }
+
 .c-date_picker_calendar__date--disabled {
-    color: red
+    color: red;
 }
+
 /* Add channel */
 .p-channel_name_input__label_title > strong,
 .p-channel_create_modal__label_title > strong,
 .p-invite_users_input__label_title > strong {
     color: #d6d4cf;
 }
+
 /* Add channel input subtext */
 .p-channel_create_modal__input_subtext,
 .p-invite_users_input__input_subtext,
 .p-channel_create_modal__private_toggle_copy_body {
     color: #bdb9b2;
 }
+
 /* Windows user popup */
 .p-member_profile_card, .p-member_profile_card * {
     background-color: #17181c !important;
     color: #d6d4cf !important;
+}
+
+.c-message--focus-within:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight),
+.c-message--hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--sli_highlight),
+.c-message:hover:not(.c-message--highlight):not(.c-message--standalone):not(.c-message--pinned):not(.c-message--ephemeral):not(.c-message--custom_response):not(.c-message--starred):not(.c-message--sli_highlight) {
+    background-color: #0c2a35 !important;
 }
