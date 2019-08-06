@@ -90,6 +90,9 @@ else:
     require_sudo = False
     for root in os.environ['LOCALAPPDATA'], os.environ['PROGRAMFILES']:
         slack_root_path = os.path.join(root, "slack")
+        if not os.path.exists(slack_root_path):  
+            print("Slack not found at {0}".format(slack_root_path))
+            continue
         slack_versions = sorted([slack_version for slack_version in os.listdir(slack_root_path) if
                                  slack_version.startswith("app-") and os.path.isdir(
                                      os.path.join(slack_root_path, slack_version))], reverse=True)
