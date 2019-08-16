@@ -27680,3 +27680,8 @@ div.c-scrollbar__child > div.c-virtual_list__scroll_container,
     background-color: #17181c !important;
     color: #d6d4cf !important;
 }
+
+/* Primary footer */
+.workspace__primary_view_footer {
+    background-color: #17181c;
+}
